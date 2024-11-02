@@ -1439,7 +1439,7 @@ h1, h2, h3, h4, h5, h6, figure {
   text-decoration: none;
   outline: none;
 }
-
+/*
 .fh5co-nav-toggle {
   width: 25px;
   height: 25px;
@@ -1523,7 +1523,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav-toggle {
   position: absolute;
   right: 0px;
-  top: 65px;
+  top: 25px;
   z-index: 21;
   padding: 6px 0 0 0;
   display: block;
@@ -1539,7 +1539,7 @@ h1, h2, h3, h4, h5, h6, figure {
     display: block;
   }
 }
-
+*/
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
@@ -1737,9 +1737,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 /*# sourceMappingURL=style.css.map */
-.divisions {
+.divisions, .blog-text {
   list-style-type: none;
   padding: 0;
+  margin: 20px auto 40px;
 }
 .divisions > li:nth-child(odd) { background: rgba(0, 0, 0, 0.04); }
 .divisions li ul {
@@ -1761,8 +1762,19 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-bottom: 0;
   padding-left: 15px;
 }
-.event p:first-child {
+.event p:first-child{
   border-radius: 5px 5px 0 0;
   background: rgba(0, 0, 0, 0.04);
   font-weight: bold;
+}
+p.address {
+  margin: 0;
+}
+p.address {
+  background: rgba(0, 0, 0, 0.04);
+  font-weight: bold;
+
+}
+.event a {
+  color: #828282;
 }
