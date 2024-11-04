@@ -655,7 +655,7 @@ if(navigator.share !== undefined) {
       var shareBtn = document.querySelector('.share-button');
       shareBtn.addEventListener('click', clickEvent => {
         clickEvent.preventDefault();
-        navigator.share({title: document.title, text: window.location.href, url: window.location.href})
+        navigator.share({title: document.title, text: "Registration is open for for Valley De Oro Little League", url: window.location.href})
           .then(() => console.log('Successful share'),
            error => console.log('Error sharing:', error));
       });
