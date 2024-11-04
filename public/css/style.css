@@ -1793,3 +1793,9 @@ svg.bi {
 .icon {
   max-width: 50px;
 }
+span.fallback-share.hidden {
+  display: none;
+}
+.share-button.hidden {
+  display: none;
+}
