@@ -1013,7 +1013,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-heading {
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .fh5co-heading h2 {
   font-size: 30px;
@@ -1746,12 +1746,17 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 /*# sourceMappingURL=style.css.map */
+
 .divisions, .blog-text {
   list-style-type: none;
   padding: 0;
-  margin: 20px auto 40px;
+  margin: 0 auto;
 }
-.divisions > li:nth-child(odd) { background: rgba(0, 0, 0, 0.04); }
+.divisions li {
+  padding-left: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+/* .divisions > li:nth-child(even) { background: rgba(0, 0, 0, 0.04); } */
 .divisions li ul {
 
   padding: 0;
@@ -1798,4 +1803,21 @@ span.fallback-share.hidden {
 }
 .share-button.hidden {
   display: none;
+}
+
+.age-calculator label {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  padding: 0 5px 0px;
+}
+svg.directions {
+  fill: #828282;
+  max-width: 50px;
+  float: left;
+  padding: 5px;
+}
+.services .btn {
+  margin-top: 25px;
 }
