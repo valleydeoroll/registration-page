@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #828282;
+  color: #595959;
   background: #fff;
 }
 
@@ -1037,7 +1037,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
-  color: #828282;
+  color: #595959;
 }
 .fh5co-heading span {
   display: block;
@@ -1790,7 +1790,7 @@ p.address {
 
 }
 .event a {
-  color: #828282;
+  color: #595959;
 }
 svg.bi {
   vertical-align: middle;
@@ -1813,7 +1813,7 @@ span.fallback-share.hidden {
   padding: 0 5px 0px;
 }
 svg.directions {
-  fill: #828282;
+  fill: #595959;
   max-width: 50px;
   float: left;
   padding: 5px;
