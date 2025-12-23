@@ -1122,14 +1122,14 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-started h2 span {
   font-weight: 100;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
 }
 #fh5co-started h2 .percent {
   color: #f76907;
   font-weight: 700;
 }
 #fh5co-started p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
 }
 #fh5co-started .form-control {
   background: rgba(255, 255, 255, 0.2);
