@@ -1821,3 +1821,9 @@ svg.directions {
 .services .btn {
   margin-top: 25px;
 }
+
+.owl-stage {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
