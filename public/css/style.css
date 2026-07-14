@@ -599,9 +599,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .services span {
-  width: 100%;
   display: block;
-  margin-bottom: 30px;
 }
 .services span img {
   width: 60px;
@@ -1826,4 +1824,119 @@ svg.directions {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+p.league-age-info {
+  font-size: 13px;
+}
+/* --- CALCULATOR FORM CARD STYLING --- */
+.calc-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.calc-subtitle { font-size: 12px; color: #666; text-align: center; margin-bottom: 20px; }
+.input-row { display: flex; gap: 12px; margin-bottom: 15px; }
+.input-group { flex: 1; }
+.input-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #444; }
+.calc-card select { width: 100%; padding: 12px; font-size: 16px; border: 1px solid #cccccc; border-radius: 6px; box-sizing: border-box; background-color: #fff; height: 48px; font-family: inherit; }
+
+/* --- INTERNAL RESULTS STYLING --- */
+.result-container { display: none; padding: 20px 0;}
+.age-badge { background-color: blue; color: white; text-align: center; padding: 12px; border-radius: 6px; font-size: 16px; font-weight: bold; margin-bottom: 12px; }
+.division-box h4 { margin: 0; color: #333; font-size: 15px; padding: 20px 10px;}
+.division-list { margin: 0; padding: 0 10px; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.division-list li.error-msg { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; border-radius: 6px; padding: 10px; font-size: 14px; width: 100%; list-style: none; }
+.division-box {
+    border-radius: 0 0 12px 12px;
+    border: 2px solid blue;
+    padding-bottom: 20px;
+}
+
+.div-pill {
+  align-items: center;
+  background-color: #007a33;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+a.div-pill {
+  color: white;
+  font-size: 15px;
+}
+/* --- EXTERNAL DIVISIONS LIST STATE HIGHLIGHTS --- */
+.divisions li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    margin-bottom: 2px;
+    border-radius: 6px;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid transparent;
+}
+
+/* Bright focus green state for qualifying rows */
+.divisions li.eligible-row {
+    background-color: #e6f4ea;
+    color: #007a33;
+    font-weight: 600;
+    border-color: #a3cfbb;
+}
+
+/* Ghost opacity fade style for non-matching variants */
+.divisions li.faded-row {
+    opacity: 0.35;
+    filter: grayscale(50%);
+}
+
+/* Injected label element configuration styling */
+.eligible-badge {
+    background-color: #007a33;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    animation: badgePop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+span#ageBadge {
+      background: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+}
+@keyframes badgePop {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }

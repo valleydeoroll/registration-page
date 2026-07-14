@@ -159,16 +159,180 @@
 						</div>
 					</div> -->
 
+<div class="row">
+    <div class="event col">
+        <p class="address">VDO League Age Calculator</p>
+			<p id="calcSubtitle">Little League Age Calculator</p>
+        
+        <!-- START CUSTOM DYNAMIC AGE CALCULATOR -->
+        <div class="calc-card">
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="birthMonth">Birth Month</label>
+                    <select id="birthMonth" onchange="calculateLeagueAge()">
+                        <option value="">-- Month --</option>
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                </div>
 
-					<div class="row">
-						<div class="event col">
-							<a href="https://www.littleleague.org/downloads/2026-baseball-age-chart/" aria-label="View the Leage Age Chart" target="_blank">
+                <div class="input-group">
+                    <label for="birthYear">Birth Year</label>
+                    <select id="birthYear" onchange="calculateLeagueAge()">
+                        <option value="">-- Year --</option>
+                        <!-- JavaScript dynamically populates this block -->
+                    </select>
+                </div>
+            </div>
 
-							<p class="address">League Age Chart</p>
-							<p>Official Little League Age Chart</p>
-							</a>
-						</div>
-					</div>
+            <!-- Renders your internal results box layout -->
+            <div id="resultContainer" class="result-container">
+                <div class="age-badge-container"><span id="ageBadge" ></span>
+                <div class="division-box">
+                    <h4>Eligible Division(s):</h4>
+                    <ul id="divisionList" class="division-list"></ul>
+                </div></div>
+            </div>
+
+			<p class="league-age-info">League age based on the <a href='https://www.littleleague.org/play-little-league/determine-league-age/'><b>official Little League age calculator</b></a></p>
+        </div>
+
+        <script>
+        let targetChartYear;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentYear = new Date().getFullYear();
+            const currentMonth = new Date().getMonth(); 
+
+            if (currentMonth >= 5) { 
+                targetChartYear = currentYear + 1;
+            } else {
+                targetChartYear = currentYear;
+            }
+
+            const fallYear = targetChartYear - 1;
+            document.getElementById('calcSubtitle').textContent = `Fall Ball is intended to help players prepare for the Division they’ll play in the following spring, using next year’s age chart.`;
+
+            const yearSelect = document.getElementById('birthYear');
+            const newestBirthYear = targetChartYear - 4;  
+            const oldestBirthYear = targetChartYear - 13; 
+
+            yearSelect.innerHTML = '<option value="">-- Year --</option>';
+
+            for (let year = newestBirthYear; year >= oldestBirthYear; year--) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            }
+        });
+
+        function calculateLeagueAge() {
+            const ageToDivisions = {
+                4: ["Tball"],
+                5: ["Tball"],
+                6: ["Tball", "Caps"],
+                7: ["Caps"],
+                8: ["Caps", "Minors"],
+                9: ["Minors"],
+                10: ["Minors", "Majors"],
+                11: ["Minors", "Majors"],
+                12: ["Majors"],
+                13: ["Intermediate"]
+            };
+
+            const monthSelect = document.getElementById('birthMonth').value;
+            const yearSelect = document.getElementById('birthYear').value;
+            const resultContainer = document.getElementById('resultContainer');
+            const ageBadge = document.getElementById('ageBadge');
+            const divisionList = document.getElementById('divisionList');
+
+            // 1. LOOK FOR THE EXISTING UL ELSEWHERE ON THE PAGE
+            const externalListItems = document.querySelectorAll('.divisions li');
+
+            // Helper to clean up external list highlights on reset
+            const resetExternalList = () => {
+                externalListItems.forEach(li => {
+                    li.classList.remove('eligible-row');
+                    const badge = li.querySelector('.eligible-badge');
+                    if (badge) badge.remove();
+                });
+            };
+
+            if (monthSelect === "" || yearSelect === "") {
+                resultContainer.style.display = 'none';
+                resetExternalList();
+                return;
+            }
+
+            const birthMonth = parseInt(monthSelect, 10);
+            const birthYear = parseInt(yearSelect, 10);
+            
+            let age = targetChartYear - birthYear;
+
+            if (birthMonth > 7) {
+                age--;
+            }
+
+            // Always clear styles before reapplying rules
+            resetExternalList();
+
+            if (age >= 4 && age <= 13) {
+                ageBadge.textContent = `League Age: ${age}`;
+                divisionList.innerHTML = '';
+                
+                const eligibleDivs = ageToDivisions[age] || [];
+                
+                // 2. RENDER THE INTERNAL LIST RESULTS
+eligibleDivs.forEach(div => {
+  const a = document.createElement('a');
+  a.href = '#divisions';
+  a.className = 'div-pill';
+  a.textContent = div;
+
+  divisionList.appendChild(a); // if it's the container for the buttons
+});
+                
+                // 3. HIGHLIGHT THE EXTERNAL UL ELSEWHERE ON THE PAGE
+                externalListItems.forEach(li => {
+                    const text = li.textContent.toLowerCase();
+                    const isEligible = eligibleDivs.some(div => text.includes(div.toLowerCase()));
+
+                    if (isEligible) {
+                        li.classList.add('eligible-row');
+                        
+                        // Inject a green badge to call out matching rows directly
+                        const badge = document.createElement('span');
+                        badge.className = 'eligible-badge';
+                        badge.textContent = 'Eligible';
+                        li.appendChild(badge);
+                    }
+                });
+
+                resultContainer.style.display = 'block';
+            } else {
+                ageBadge.textContent = `League Age: ${age}`;
+                divisionList.innerHTML = '<li class="error-msg">Player falls outside the age parameters (4-13) for our league divisions.</li>';
+                
+                // Fade everything if outside bounds
+                resultContainer.style.display = 'block';
+            }
+        }
+        </script>
+        <!-- END CUSTOM DYNAMIC AGE CALCULATOR -->
+    </div>
+</div>
 					</div>
 				</div>
 
@@ -200,7 +364,7 @@
 						</div>
 						<div class="row">
 							<div class="event col">
-								<p>Divisions</p>
+								<p id="divisions">Divisions</p>
 								<ul class="divisions">
 									<li>Tball: 4-6 year olds</li>
 									<li>Caps: 6-8 year olds</li>
@@ -787,7 +951,7 @@ const linkImg = document.getElementById("sc-link-img");
     
     const targetUrl = "https://login.stacksports.com/login?client_id=612b0399b1854a002e427f78&redirect_uri=https://core-api.bluesombrero.com/login/redirect/portal/25056&app_name=Valley+De+Oro+Little+League&portalid=25056&instancekey=tshq";
     const targetDate = new Date("2026-06-15T06:00:00-07:00");
-
+    var timerInterval = null;
     function checkRegistration() {
         const now = new Date();
 
@@ -827,7 +991,7 @@ const linkImg = document.getElementById("sc-link-img");
     }
 
     checkRegistration();
-    const timerInterval = setInterval(checkRegistration, 1000);
+    timerInterval = setInterval(checkRegistration, 1000);
 });
 
 
