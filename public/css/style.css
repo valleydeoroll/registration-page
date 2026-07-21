@@ -1827,6 +1827,10 @@ svg.directions {
 }
 p.league-age-info {
   font-size: 13px;
+  padding-bottom: 10px;
+}
+p.league-age-info.note{
+  font-size: 12px;
 }
 /* --- CALCULATOR FORM CARD STYLING --- */
 .calc-card {
