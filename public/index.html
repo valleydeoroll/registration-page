@@ -8,7 +8,7 @@
     <!-- Meta Tags for SEO & AI Search Engines -->
     <meta
       name="description"
-      content="Official Registration for Valley De Oro Little League in Spring Valley, CA. Sign up for Fall Ball and Spring Little League divisions for youth ages 4-13."
+      content="Official Registration for Valley De Oro Little League in Spring Valley, CA. Sign up for Fall Ball and Spring Little League divisions for youth ages 4-14."
     />
     <meta
       name="keywords"
@@ -23,7 +23,7 @@
     />
     <meta
       property="og:description"
-      content="Register now for Valley De Oro Little League in Spring Valley! T-Ball, Caps, Minors, Majors, and Intermediate divisions available."
+      content="Register now for Valley De Oro Little League in Spring Valley! T-Ball, Caps, Minors, Majors, Intermediate, and Juniors divisions available."
     />
     <meta
       property="og:image"
@@ -90,11 +90,6 @@
     />
 
     <style>
-      /* Base & Typography Accessibility Adjustments */
-      html {
-        font-size: 18px; /* High legibility default text size */
-      }
-
       /* Modern Reveal Animations */
       .reveal-element {
         opacity: 0;
@@ -134,7 +129,7 @@
         .accessible-card p, 
         .accessible-card li, 
         .accessible-card span:not([class*="text-"]) { 
-          color: #1e293b !important; 
+          color: #334155 !important; 
         }
         .card-bg-subtle {
           background-color: #f8fafc !important;
@@ -147,10 +142,10 @@
         display: inline-block;
         background-color: #c2410c;
         color: #ffffff;
-        font-weight: 700;
-        padding: 0.4rem 0.9rem;
+        font-weight: 600;
+        padding: 0.35rem 0.85rem;
         border-radius: 9999px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin: 0.25rem;
         text-decoration: underline;
         transition: transform 0.2s ease, background-color 0.2s ease;
@@ -174,7 +169,7 @@
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
         border-radius: 0.5rem;
-        font-weight: 700;
+        font-weight: 600;
       }
       @media (prefers-color-scheme: light) {
         .eligible-row {
@@ -188,22 +183,22 @@
         margin-left: 0.5rem;
         background-color: #15803d;
         color: #ffffff;
-        font-size: 0.8rem;
-        padding: 0.25rem 0.65rem;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
         border-radius: 9999px;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: 700;
         display: inline-block;
       }
 
       /* Accessibility: Visible, high contrast focus rings */
       *:focus-visible {
-        outline: 3px solid #d97706 !important;
+        outline: 2px solid #92400e !important;
         outline-offset: 3px !important;
       }
       @media (prefers-color-scheme: dark) {
         *:focus-visible {
-          outline: 3px solid #f97316 !important;
+          outline: 2px solid #f97316 !important;
         }
       }
 
@@ -223,46 +218,59 @@
     <!-- Accessibility Skip Link -->
     <a
       href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-amber-600 focus:text-white focus:font-black focus:rounded-lg focus:shadow-2xl focus:ring-4 focus:ring-black"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-amber-600 focus:text-white focus:font-bold focus:rounded-lg focus:shadow-2xl focus:ring-4 focus:ring-black"
     >
       Skip to main content
     </a>
 
-    <!-- Header / Branding Bar -->
+    <!-- Top Header / Branding Bar -->
     <header
       role="banner"
-      class="sticky top-0 z-50 bg-white dark:bg-slate-950 border-b-2 border-slate-300 dark:border-slate-800 shadow-md"
+      class="sticky top-0 z-50 bg-white/90 dark:bg-transparent backdrop-blur-sm border-b border-slate-300/80 dark:border-white/20 transition-all duration-300"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
       >
-        <!-- Left Branding -->
+        <!-- Left Logo: Valley De Oro Little League -->
         <div class="flex items-center gap-3">
           <img
             src="images/VDO-Logo-2025.png"
-            alt="Valley De Oro Little League logo"
-            class="h-12 w-auto object-contain"
+            alt="Valley De Oro Little League official logo"
+            class="h-14 w-auto object-contain drop-shadow-md"
           />
-          <div>
+          <div class="hidden sm:block">
             <span
-              class="block text-xs uppercase tracking-wider text-amber-800 dark:text-amber-400 font-black"
-              >Official League Registration</span
+              class="block text-xs uppercase tracking-wider text-amber-900 dark:text-amber-400 font-bold"
+              >Official Host</span
             >
             <span
-              class="block font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white leading-tight"
+              class="block font-bold text-lg text-slate-900 dark:text-white leading-tight"
               >Valley De Oro Little League</span
             >
           </div>
         </div>
+
         <!-- CTA Button -->
         <div>
           <a
-            href="#register-now"
-            class="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-extrabold text-base px-5 py-2.5 rounded-lg transition-colors shadow-md border-2 border-amber-900 dark:border-amber-400"
+            href="https://pitchhitrun2026.leagueapps.com/events/4948009-valley-de-oro-little-league"
+            aria-label="Register Now for Valley De Oro MLB Pitch Hit and Run 2026"
+            class="hidden md:inline-flex items-center gap-2 bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-sm px-6 py-2.5 rounded-full transition-all duration-200 shadow-md border-2 border-amber-950 dark:border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-800 dark:focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950 shrink-0"
           >
-            <span>Register Now</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <span class="text-white">Register Now</span>
+            <svg
+              class="w-4 h-4 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
             </svg>
           </a>
         </div>
@@ -276,50 +284,60 @@
         aria-label="Registration Hero"
         class="relative py-12 lg:py-16 border-b-2 border-slate-300 dark:border-slate-800 bg-slate-100 dark:bg-slate-950 text-slate-900 dark:text-white"
       >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 opacity-40 dark:opacity-80">
+          <img
+            src="images/dugout.png"
+            alt="MLB Pitch Hit Run Field"
+            class="h-full w-full object-cover object-right"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-white/30 via-white/10 to-slate-50/40 dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-900/90"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center relative z-10">
           <div
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-200 dark:bg-amber-950 border-2 border-amber-700 dark:border-amber-500 text-amber-900 dark:text-amber-300 font-black text-xs uppercase tracking-widest mb-4 reveal-element"
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-xs uppercase tracking-widest mb-3 reveal-element mx-auto revealed"
           >
             <span>Spring Registration Open</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-4 reveal-element delay-100">
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 reveal-element delay-100">
             JOIN VALLEY DE ORO LITTLE LEAGUE
           </h1>
 
-          <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-800 dark:text-slate-200 font-medium mb-8 leading-relaxed reveal-element delay-200">
+          <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-800 dark:text-slate-200 font-normal mb-8 leading-relaxed reveal-element delay-200">
             Welcome to the upcoming Little League season! Register today to develop skills, build lifelong friendships, and play competitive youth baseball in Spring Valley.
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-element delay-300">
             <a
               href="#register-now"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-black text-lg px-8 py-3.5 rounded-lg transition-colors shadow-lg border-2 border-amber-900 dark:border-amber-400"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 min-h-[48px] rounded-full transition-all duration-200 shadow-xl hover:scale-105 border-2 border-amber-950 dark:border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-800 dark:focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
             >
-              <span>Start Registration</span>
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <span class="text-white">Start Registration</span>
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
           </div>
 
-          <!-- Key Highlights -->
-          <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-center reveal-element delay-300 w-full">
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700">
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold uppercase block mb-1">Cost</span>
-              <span class="text-xl font-black text-emerald-800 dark:text-emerald-400">$195 / Child</span>
+          <!-- Key Highlights Ribbon -->
+          <div class="mt-8 pt-6 border-t border-slate-300 dark:border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-center reveal-element delay-300 w-full">
+            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
+              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Cost</div>
+              <div class="text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-400">$195 / Child</div>
             </div>
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700">
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold uppercase block mb-1">Ages</span>
-              <span class="text-xl font-black text-slate-900 dark:text-white">4 to 13 Years</span>
+            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
+              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Ages</div>
+              <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">4 to 14 Years</div>
             </div>
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700">
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold uppercase block mb-1">Late Fee</span>
-              <span class="text-xl font-black text-amber-900 dark:text-amber-400">$225 after Jan 10</span>
+            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
+              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Late Fee</div>
+              <div class="text-base sm:text-lg font-bold text-amber-900 dark:text-amber-400">+$30 after Jan 10</div>
             </div>
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700">
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-bold uppercase block mb-1">Includes</span>
-              <span class="text-xl font-black text-blue-900 dark:text-blue-400">Hat, Jersey &amp; Gear</span>
+            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
+              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">New This Season!</div>
+              <div class="text-base sm:text-lg font-bold text-blue-900 dark:text-blue-400">Juniors Division</div>
             </div>
           </div>
         </div>
@@ -329,8 +347,8 @@
       <section aria-label="League Information" class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">LEAGUE DETAILS &amp; AGE CALCULATOR</h2>
-            <p class="text-slate-800 dark:text-slate-200 text-base sm:text-lg mt-2 font-medium">Find your child's division, location details, and key deadlines.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Spring Season</h2>
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Find your child's division, location details, and key deadlines.</p>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -338,48 +356,57 @@
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element">
               <div>
                 <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-black">
+                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                   </span>
-                  <h3 class="text-xl font-black text-slate-900 dark:text-white">Location &amp; Calculator</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">League Info</h3>
                 </div>
 
-                <a href="http://maps.apple.com/maps?q=32.7327788,-116.9737356" target="_blank" class="block p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 hover:border-amber-600 transition-colors mb-5 group">
-                  <p class="text-base font-extrabold text-white group-hover:text-amber-400">3230 Sweetwater Springs Blvd.</p>
-                  <p class="text-sm text-slate-200 dark:text-slate-300 mt-1">Spring Valley, CA 91977</p>
-                  <span class="text-xs text-blue-400 dark:text-blue-300 font-bold inline-flex items-center gap-1 mt-2 underline">Get Directions &rarr;</span>
+                <a href="http://maps.apple.com/maps?q=32.7327788,-116.9737356" target="_blank" class="block p-4 rounded-xl card-bg-subtle bg-slate-800 dark:border-slate-700 hover:border-amber-600 transition-colors mb-5 group">
+                  <img src="images/map.png" alt="Valley De Oro field location map">
+                  <p class="text-base font-bold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400">3230 Sweetwater Springs Blvd.</p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 mt-1">Spring Valley, CA 91977</p>
                 </a>
+
+                <div class="border-t-2 border-slate-300 dark:border-slate-700 pt-5">
+                  <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Residency Boundary Map</h4>
+                  <p id="calcSubtitle" class="text-sm text-slate-700 dark:text-slate-300 mb-4 leading-relaxed font-normal"><a href="https://dt5602vnjxv0c.cloudfront.net/portals/25056/docs/boundary%20map.pdf" target="_blank" class="font-bold">View boundary map.</a></p>
+                </div>
 
                 <!-- Age Calculator Component -->
                 <div class="border-t-2 border-slate-300 dark:border-slate-700 pt-5">
-                  <h4 class="text-lg font-black text-slate-900 dark:text-white mb-1">VDO League Age Calculator</h4>
-                  <p id="calcSubtitle" class="text-sm text-slate-800 dark:text-slate-200 mb-4 leading-relaxed font-medium">Fall Ball prepares players for the division they will play in next spring using next year's chart.</p>
+                  <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">VDO League Age Calculator</h4>
 
+                  <p class="py-4">Figure out which division your player qualifies for by using this calculator.</p>
                   <div class="space-y-4">
-                    <div>
-                      <label for="birthMonth" class="block text-xs font-black uppercase text-slate-900 dark:text-slate-200 mb-1">Birth Month</label>
-                      <select id="birthMonth" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
-                        <option value="">-- Select Month --</option>
-                        <option value="0">January</option><option value="1">February</option><option value="2">March</option>
-                        <option value="3">April</option><option value="4">May</option><option value="5">June</option>
-                        <option value="6">July</option><option value="7">August</option><option value="8">September</option>
-                        <option value="9">October</option><option value="10">November</option><option value="11">December</option>
-                      </select>
-                    </div>
+                    <!-- Month & Year Row -->
+                    <div class="grid grid-cols-2 gap-3">
+                      <div>
+                        <label for="birthMonth" class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1">Birth Month</label>
+                        <select id="birthMonth" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
+                          <option value="">-- Month --</option>
+                          <option value="0">January</option><option value="1">February</option><option value="2">March</option>
+                          <option value="3">April</option><option value="4">May</option><option value="5">June</option>
+                          <option value="6">July</option><option value="7">August</option><option value="8">September</option>
+                          <option value="9">October</option><option value="10">November</option><option value="11">December</option>
+                        </select>
+                      </div>
 
-                    <div>
-                      <label for="birthYear" class="block text-xs font-black uppercase text-slate-900 dark:text-slate-200 mb-1">Birth Year</label>
-                      <select id="birthYear" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
-                        <option value="">-- Select Year --</option>
-                      </select>
+                      <div>
+                        <label for="birthYear" class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1">Birth Year</label>
+                        <select id="birthYear" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
+                          <option value="">-- Year --</option>
+                        </select>
+                      </div>
                     </div>
 
                     <!-- Age Results Container -->
                     <div id="resultContainer" class="hidden p-4 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-600 text-center mt-4">
-                      <div id="ageBadge" class="text-xl font-black text-amber-950 dark:text-amber-200 mb-2"></div>
-                      <div class="text-xs text-slate-900 dark:text-slate-100 font-extrabold uppercase mb-2">Eligible Division(s):</div>
+                      <div id="ageBadge" class="text-xl font-bold text-amber-950 dark:text-amber-200 mb-2"></div>
+                      <div class="text-xs text-slate-900 dark:text-slate-100 font-bold uppercase mb-2">Eligible Division(s):</div>
                       <div id="divisionList" class="flex flex-wrap justify-center gap-2"></div>
                     </div>
+                    <p>League age based on the <a href="https://www.littleleague.org/play-little-league/determine-league-age/" target="_blank" class="font-bold">official Little League age calculator</a></p>
                   </div>
                 </div>
               </div>
@@ -389,25 +416,28 @@
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100">
               <div>
                 <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-900 dark:text-blue-300 font-black">
+                  <span class="p-2 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-900 dark:text-blue-300 font-bold">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                   </span>
-                  <h3 class="text-xl font-black text-slate-900 dark:text-white">Divisions &amp; Pricing</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Divisions &amp; Pricing</h3>
                 </div>
+                <div class="grid grid-cols-2 gap-2.5 mb-4 items-stretch">
+                  <!-- Registration Fee Card -->
+                  <div class="p-2.5 sm:p-3.5 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center flex flex-col justify-center">
+                    <span class="block text-[11px] sm:text-xs font-bold uppercase text-slate-700 dark:text-slate-300 leading-tight">Registration Fee</span>
+                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">$195 <span class="text-xs font-normal text-slate-700 dark:text-slate-300">/ child</span></div>
+                  </div>
 
-                <div class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 mb-4 text-center">
-                  <span class="text-xs font-black uppercase text-slate-200 dark:text-slate-300">Registration Fee</span>
-                  <div class="text-3xl font-black text-white mt-1">$195<span class="text-base font-normal text-slate-300"> / child</span></div>
-                </div>
-
-                <div class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 mb-6 text-center">
-                  <span class="text-xs font-black uppercase text-slate-200 dark:text-slate-300">Late Registration Fee</span>
-                  <div class="text-3xl font-black text-white mt-1">$225<span class="text-base font-normal text-slate-300"> / child</span></div>
+                  <!-- Late Fee Card -->
+                  <div class="p-2.5 sm:p-3.5 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-center flex flex-col justify-center">
+                    <span class="block text-[11px] sm:text-xs font-bold uppercase text-amber-950 dark:text-amber-300 leading-tight">Late Fee Notice</span>
+                    <div class="text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-200 mt-1">+$30 after Jan 10</div>
+                  </div>
                 </div>
 
                 <div class="mb-6">
-                  <h4 class="text-sm font-black uppercase text-amber-800 dark:text-amber-400 tracking-wider mb-2">Registration Includes</h4>
-                  <ul class="space-y-1.5 text-base text-slate-900 dark:text-slate-100 font-medium">
+                  <h4 class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2">Registration Includes</h4>
+                  <ul class="space-y-1.5 text-sm text-slate-800 dark:text-slate-200 font-normal">
                     <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Official League Hat</li>
                     <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Custom Team Jersey</li>
                     <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Team &amp; Individual Pictures</li>
@@ -418,29 +448,37 @@
                 </div>
 
                 <div>
-                  <h4 id="divisions" class="text-sm font-black uppercase text-amber-800 dark:text-amber-400 tracking-wider mb-2">Age Divisions</h4>
-                  <ul class="divisions space-y-2 text-base text-slate-900 dark:text-slate-200">
+                  <h4 id="divisions" class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2">Age Divisions</h4>
+                  <ul class="divisions space-y-2 text-sm text-slate-800 dark:text-slate-200">
                     <li data-division="tball" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
-                      <span class="font-extrabold div-name">Tball</span>
-                      <span class="text-sm font-semibold">4–6 year olds</span>
+                      <span class="font-bold div-name">Tball</span>
+                      <span class="text-sm font-normal">4–6 year olds</span>
                     </li>
                     <li data-division="caps" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
-                      <span class="font-extrabold div-name">Caps</span>
-                      <span class="text-sm font-semibold">6–8 year olds</span>
+                      <span class="font-bold div-name">Caps</span>
+                      <span class="text-sm font-normal">6–8 year olds</span>
                     </li>
                     <li data-division="minors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
-                      <span class="font-extrabold div-name">Minors</span>
-                      <span class="text-sm font-semibold">8–10 year olds</span>
+                      <span class="font-bold div-name">Minors</span>
+                      <span class="text-sm font-normal">8–10 year olds</span>
                     </li>
                     <li data-division="majors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
-                      <span class="font-extrabold div-name">Majors</span>
-                      <span class="text-sm font-semibold">10–12 year olds</span>
+                      <span class="font-bold div-name">Majors</span>
+                      <span class="text-sm font-normal">10–12 year olds</span>
                     </li>
                     <li data-division="intermediate" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
-                      <span class="font-extrabold div-name">Intermediate</span>
-                      <span class="text-sm font-semibold">13 year olds</span>
+                      <span class="font-bold div-name">Intermediate</span>
+                      <span class="text-sm font-normal">13 year olds</span>
+                    </li>
+                    <li data-division="juniors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                      <span class="font-bold div-name">Juniors</span>
+                      <span class="text-sm font-normal">14 year olds</span>
                     </li>
                   </ul>
+
+                  <div class="py-4 font-normal text-sm">
+                    <p>Registration fees also cover: Trophies for Tball/Caps, Baseballs, Umpires, Land Lease, Trash Service, Porta-Potties, Practice Equipment, Field maintenance and supplies.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -449,36 +487,36 @@
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200">
               <div>
                 <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-black">
+                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                   </span>
-                  <h3 class="text-xl font-black text-slate-900 dark:text-white">Important Dates</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Important Dates</h3>
                 </div>
 
                 <div class="space-y-3 mb-6">
-                  <div class="p-3.5 rounded-xl bg-blue-900 dark:bg-blue-950 text-white border-2 border-blue-700 dark:border-blue-600 text-center">
-                    <span class="text-xs font-black uppercase tracking-wider text-blue-200 block">Registration Closing</span>
-                    <div class="text-lg font-black text-white mt-0.5">January 7, 2027 at 5pm</div>
+                  <div class="p-3.5 rounded-xl bg-blue-900 dark:bg-blue-950 text-white border-2 border-blue-950 dark:border-blue-600 text-center">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-200 block">Registration Closing</span>
+                    <div class="text-base font-bold text-white mt-0.5">January 7, 2027 at 5pm</div>
                   </div>
                   <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-200 dark:text-slate-300 block">Minors &amp; Majors Assessments</span>
-                    <div class="text-lg font-black text-white mt-0.5">January 9, 2027</div>
+                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Minors &amp; Majors Assessments</span>
+                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 9, 2027</div>
                   </div>
                   <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-200 dark:text-slate-300 block">Caps Assessments</span>
-                    <div class="text-lg font-black text-white mt-0.5">January 10, 2027</div>
+                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Caps Assessments</span>
+                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 10, 2027</div>
                   </div>
                   <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-200 dark:text-slate-300 block">Draft Day</span>
-                    <div class="text-lg font-black text-white mt-0.5">January 13, 2027</div>
+                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Draft Day</span>
+                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 13, 2027</div>
                   </div>
                   <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-200 dark:text-slate-300 block">Team Announcements</span>
-                    <div class="text-lg font-black text-white mt-0.5">January 23, 2027</div>
+                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Team Announcements</span>
+                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 23, 2027</div>
                   </div>
                 </div>
 
-                <div class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-sm text-slate-900 dark:text-slate-200 font-medium space-y-2">
+                <div class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-sm text-slate-800 dark:text-slate-200 font-normal space-y-2">
                   <p><strong>Note:</strong> Team placements depend on completing paperwork and age verification.</p>
                   <p>Registration closes Jan 7th at 5pm for assessment prep.</p>
                 </div>
@@ -492,47 +530,59 @@
       <section id="register-now" aria-label="Registration Steps" class="py-12 bg-slate-100 dark:bg-slate-950 border-b-2 border-slate-300 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">REGISTER TODAY!</h2>
-            <p class="text-slate-800 dark:text-slate-200 text-base sm:text-lg mt-2 font-medium">Follow these 3 simple steps to complete your registration.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">REGISTER TODAY!</h2>
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Follow these 3 simple steps to complete your registration.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- STEP 1 -->
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element">
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border-2 border-amber-700 dark:border-amber-500 text-amber-900 dark:text-amber-300 font-black text-xs uppercase mb-3">Step 1</div>
-                <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-2">Fill Out Forms</h3>
-                <p class="text-base text-slate-800 dark:text-slate-200 mb-6 leading-relaxed font-medium">Complete online waivers including the Registration Form, Code of Conduct, Media Release, and Medical Release. Each player requires separate paperwork.</p>
+                <div class="inline-block px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-xs uppercase mb-3">Step 1</div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Fill Out Forms</h3>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Complete online waivers including the Registration Form, Code of Conduct, Media Release, and Medical Release. Each player requires separate paperwork.</p>
               </div>
-              <a href="https://sign.valleydeoroll.com/d/E2AcFEyPfmFsBS" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-extrabold text-base px-5 py-3 rounded-lg transition-colors border-2 border-amber-900 dark:border-amber-400">
-                <span>Start Paperwork</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <a
+                href="https://sign.valleydeoroll.com/d/E2AcFEyPfmFsBS"
+                target="_blank"
+                class="w-full inline-flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-amber-950 dark:border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-800 dark:focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
+              >
+                <span class="text-white">Start Paperwork</span>
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
 
             <!-- STEP 2 -->
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100">
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-blue-200 dark:bg-blue-950 border-2 border-blue-700 dark:border-blue-500 text-blue-900 dark:text-blue-300 font-black text-xs uppercase mb-3">Step 2</div>
-                <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-2">Sports Connect</h3>
-                <p class="text-base text-slate-800 dark:text-slate-200 mb-6 leading-relaxed font-medium">Log in or create an account on Sports Connect to submit your completed forms, pay registration fees, and view team schedules.</p>
+                <div class="inline-block px-3 py-1 rounded-full bg-blue-200 dark:bg-blue-950 border-2 border-blue-800 dark:border-blue-500 text-blue-950 dark:text-blue-300 font-bold text-xs uppercase mb-3">Step 2</div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Sports Connect</h3>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Log in or create an account on Sports Connect to submit your completed forms, pay registration fees, and view team schedules.</p>
               </div>
-              <a id="sc-link-btn" href="https://login.stacksports.com/login?client_id=612b0399b1854a002e427f78&redirect_uri=https://core-api.bluesombrero.com/login/redirect/portal/25056&app_name=Valley+De+Oro+Little+League&portalid=25056&instancekey=tshq" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-blue-800 hover:bg-blue-900 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-extrabold text-base px-5 py-3 rounded-lg transition-colors border-2 border-blue-950 dark:border-blue-400">
-                <span>Create Account / Log In</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <a
+                id="sc-link-btn"
+                href="https://login.stacksports.com/login?client_id=612b0399b1854a002e427f78&redirect_uri=https://core-api.bluesombrero.com/login/redirect/portal/25056&app_name=Valley+De+Oro+Little+League&portalid=25056&instancekey=tshq"
+                target="_blank"
+                class="w-full inline-flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-950 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-blue-950 dark:border-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
+              >
+                <span class="text-white">Create Account / Log In</span>
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
 
             <!-- STEP 3 -->
             <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200">
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-slate-500 dark:border-slate-600 text-slate-900 dark:text-slate-200 font-black text-xs uppercase mb-3">Step 3</div>
-                <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-2">Tell Your Friends</h3>
-                <p class="text-base text-slate-800 dark:text-slate-200 mb-6 leading-relaxed font-medium">Spread the word! Share Valley De Oro Little League registration with neighborhood families and friends.</p>
+                <div class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-slate-600 dark:border-slate-600 text-slate-900 dark:text-slate-200 font-bold text-xs uppercase mb-3">Step 3</div>
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Tell Your Friends</h3>
+                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Spread the word! Share Valley De Oro Little League registration with neighborhood families and friends.</p>
               </div>
-              <button id="share-btn" class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-extrabold text-base px-5 py-3 rounded-lg transition-colors border-2 border-slate-950 dark:border-slate-500">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z"/></svg>
-                <span>Share Registration Link</span>
+              <button
+                id="share-btn"
+                class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-slate-950 dark:border-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-800 dark:focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
+              >
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z"/></svg>
+                <span class="text-white">Share Registration Link</span>
               </button>
             </div>
           </div>
@@ -543,34 +593,34 @@
       <section aria-label="Frequently Asked Questions" class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">FREQUENTLY ASKED QUESTIONS</h2>
-            <p class="text-slate-800 dark:text-slate-200 text-base sm:text-lg mt-2 font-medium">Find answers to common questions about registration, age divisions, gear, and field schedules.</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Find answers to common questions about registration, age divisions, gear, and field schedules.</p>
           </div>
 
           <!-- FAQ Category 1 -->
           <div class="mb-8 reveal-element">
-            <h3 class="text-xl font-black text-amber-800 dark:text-amber-400 mb-4">Registration &amp; Eligibility</h3>
+            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Registration &amp; Eligibility</h3>
             <div class="space-y-3">
               <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-lg text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
                   <span>Are there residency or boundary requirements to play at VDO?</span>
                   <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
                     <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-800 dark:text-slate-200 text-base font-medium border-t-2 border-slate-300 dark:border-slate-700 pt-3">
+                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
                   No! Valley De Oro Little League welcomes players from all zip codes and residency boundaries. Everyone is eligible to register and join our league.
                 </div>
               </details>
 
               <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-lg text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
                   <span>What documents are required to complete registration?</span>
                   <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
                     <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-800 dark:text-slate-200 text-base font-medium border-t-2 border-slate-300 dark:border-slate-700 pt-3">
+                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
                   You will need proof of age (birth certificate) and online consent forms including the medical release and code of conduct.
                 </div>
               </details>
@@ -579,16 +629,16 @@
 
           <!-- FAQ Category 2 -->
           <div class="mb-8 reveal-element">
-            <h3 class="text-xl font-black text-amber-800 dark:text-amber-400 mb-4">Divisions &amp; Player Assessments</h3>
+            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Divisions &amp; Player Assessments</h3>
             <div class="space-y-3">
               <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-lg text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
                   <span>How is my child's division determined?</span>
                   <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
                     <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-800 dark:text-slate-200 text-base font-medium border-t-2 border-slate-300 dark:border-slate-700 pt-3">
+                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
                   Division placement is primarily based on official Little League Age using our calculator above. For older divisions (Minors, Majors), player evaluations and skill assessments are used to ensure balanced team creation.
                 </div>
               </details>
@@ -597,16 +647,16 @@
 
           <!-- FAQ Category 3 -->
           <div class="reveal-element">
-            <h3 class="text-xl font-black text-amber-800 dark:text-amber-400 mb-4">Schedules &amp; Equipment</h3>
+            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Schedules &amp; Equipment</h3>
             <div class="space-y-3">
               <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-lg text-slate-900 dark:text-white hover:text-amber-700 dark:hover:text-amber-400 transition-colors">
+                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
                   <span>What equipment does the league provide vs what families need to buy?</span>
                   <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
                     <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-800 dark:text-slate-200 text-base font-medium border-t-2 border-slate-300 dark:border-slate-700 pt-3">
+                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
                   The league provides an official team jersey and hat. Families are generally responsible for purchasing a fielding glove, cleats, baseball pants, belt, and personal bat/helmet.
                 </div>
               </details>
@@ -618,9 +668,9 @@
       <!-- Help / Contact Banner -->
       <section aria-label="Questions Section" class="py-10 bg-slate-100 dark:bg-slate-950">
         <div class="max-w-4xl mx-auto px-4 text-center reveal-element">
-          <h3 class="text-2xl font-black text-slate-900 dark:text-white">Have Additional Questions?</h3>
-          <p class="text-slate-800 dark:text-slate-200 text-base mt-2 font-medium">Our Player Agent and league board members are happy to help!</p>
-          <a href="mailto:playeragent@valleydeoroll.com" class="inline-block mt-4 text-amber-800 dark:text-amber-400 hover:underline font-black text-xl transition-colors">
+          <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Have Additional Questions?</h3>
+          <p class="text-slate-700 dark:text-slate-300 text-base mt-2 font-normal">Our Player Agent and league board members are happy to help!</p>
+          <a href="mailto:playeragent@valleydeoroll.com" class="inline-block mt-4 text-amber-900 dark:text-amber-400 hover:underline font-bold text-xl transition-colors">
             playeragent@valleydeoroll.com
           </a>
         </div>
@@ -633,11 +683,11 @@
         <div class="flex items-center gap-3">
           <img src="images/VDO-Logo-2025.png" alt="Valley De Oro Little League logo" class="h-10 w-auto" />
           <div class="text-sm">
-            <p class="font-extrabold text-white">Valley De Oro Little League</p>
-            <p class="text-slate-300">P.O. Box 1408, Spring Valley, CA 91979</p>
+            <p class="font-bold text-white">Valley De Oro Little League</p>
+            <p class="text-slate-400">P.O. Box 1408, Spring Valley, CA 91979</p>
           </div>
         </div>
-        <div class="text-slate-300 text-sm text-center sm:text-right font-medium">
+        <div class="text-slate-400 text-sm text-center sm:text-right font-normal">
           &copy; 2026 Valley De Oro Little League. All Rights Reserved.
         </div>
       </div>
@@ -676,9 +726,9 @@
 
         const yearSelect = document.getElementById("birthYear");
         const newestBirthYear = targetChartYear - 4;
-        const oldestBirthYear = targetChartYear - 13;
+        const oldestBirthYear = targetChartYear - 14;
 
-        yearSelect.innerHTML = '<option value="">-- Select Year --</option>';
+        yearSelect.innerHTML = '<option value="">-- Year --</option>';
         for (let year = newestBirthYear; year >= oldestBirthYear; year--) {
           const option = document.createElement("option");
           option.value = year;
@@ -711,6 +761,7 @@
           4: ["Tball"], 5: ["Tball"], 6: ["Tball", "Caps"], 7: ["Caps"],
           8: ["Caps", "Minors"], 9: ["Minors"], 10: ["Minors", "Majors"],
           11: ["Majors"], 12: ["Majors"], 13: ["Intermediate"],
+          14: ["Juniors"]
         };
 
         const monthVal = document.getElementById("birthMonth").value;
@@ -742,7 +793,7 @@
 
         resultContainer.classList.remove("hidden");
 
-        if (age >= 4 && age <= 13) {
+        if (age >= 4 && age <= 14) {
           ageBadge.textContent = `League Age: ${age}`;
           divisionList.innerHTML = "";
           const eligibleDivs = ageToDivisions[age] || [];
@@ -772,9 +823,26 @@
           });
         } else {
           ageBadge.textContent = `League Age: ${age}`;
-          divisionList.innerHTML = '<span class="text-sm text-red-700 dark:text-red-400 font-extrabold">Player falls outside standard Little League age parameters (4-13).</span>';
+          divisionList.innerHTML = '<span class="text-sm text-red-700 dark:text-red-400 font-bold">Player falls outside standard Little League age parameters (4-14).</span>';
         }
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("header[role='banner']");
+
+        const updateHeaderOnScroll = () => {
+          if (window.scrollY > 20) {
+            header.classList.add("shadow-md", "bg-white/95", "dark:bg-slate-950/80");
+            header.classList.remove("bg-white/90", "dark:bg-transparent");
+          } else {
+            header.classList.remove("shadow-md", "bg-white/95", "dark:bg-slate-950/80");
+            header.classList.add("bg-white/90", "dark:bg-transparent");
+          }
+        };
+
+        window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+        updateHeaderOnScroll();
+      });
     </script>
   </body>
 </html>
