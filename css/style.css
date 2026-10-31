@@ -1933,6 +1933,35 @@ a.div-pill {
     animation: badgePop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+
+.new-pill {
+display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 107, 0, 0.2);
+    border: 1px solid rgba(255, 107, 0, 0.4);
+    color: #FF6B00;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.reveal-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 span#ageBadge {
       background: blue;
     color: white;
