@@ -73,7 +73,15 @@
               },
             },
             fontFamily: {
-              sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
             },
           },
         },
@@ -94,15 +102,23 @@
       .reveal-element {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        transition:
+          opacity 0.5s ease-out,
+          transform 0.5s ease-out;
       }
       .reveal-element.revealed {
         opacity: 1;
         transform: translateY(0);
       }
-      .delay-100 { transition-delay: 100ms; }
-      .delay-200 { transition-delay: 200ms; }
-      .delay-300 { transition-delay: 300ms; }
+      .delay-100 {
+        transition-delay: 100ms;
+      }
+      .delay-200 {
+        transition-delay: 200ms;
+      }
+      .delay-300 {
+        transition-delay: 300ms;
+      }
 
       /* Accessible Glassmorphic & Structured Cards */
       .accessible-card {
@@ -121,15 +137,15 @@
           border: 2px solid #cbd5e1 !important;
           box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08) !important;
         }
-        .accessible-card h2, 
-        .accessible-card h3, 
-        .accessible-card h4 { 
-          color: #0f172a !important; 
+        .accessible-card h2,
+        .accessible-card h3,
+        .accessible-card h4 {
+          color: #0f172a !important;
         }
-        .accessible-card p, 
-        .accessible-card li, 
-        .accessible-card span:not([class*="text-"]) { 
-          color: #334155 !important; 
+        .accessible-card p,
+        .accessible-card li,
+        .accessible-card span:not([class*="text-"]) {
+          color: #334155 !important;
         }
         .card-bg-subtle {
           background-color: #f8fafc !important;
@@ -148,7 +164,9 @@
         font-size: 0.85rem;
         margin: 0.25rem;
         text-decoration: underline;
-        transition: transform 0.2s ease, background-color 0.2s ease;
+        transition:
+          transform 0.2s ease,
+          background-color 0.2s ease;
       }
       @media (prefers-color-scheme: dark) {
         .div-pill {
@@ -156,7 +174,8 @@
           color: #ffffff;
         }
       }
-      .div-pill:hover, .div-pill:focus {
+      .div-pill:hover,
+      .div-pill:focus {
         transform: scale(1.05);
         outline: 3px solid #000000;
       }
@@ -210,110 +229,128 @@
           transition: none !important;
         }
       }
-	  .sponsor-marquee {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background: #fff;
-  padding: 20px 0;
-  /* Soft fade on edges */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
+.sponsor-marquee {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        background: #fff;
+        padding: 20px 0;
+      }
 
-.marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  width: max-content;
-  animation: scrollMarquee 35s linear infinite;
-}
+      .marquee-track {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        width: max-content;
+        animation: scrollMarquee 35s linear infinite;
+      }
 
-.sponsor-marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
+      .sponsor-marquee:hover .marquee-track {
+        animation-play-state: paused;
+      }
 
-.marquee-track a, 
-.marquee-track span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
+      .marquee-track a,
+      .marquee-track span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
 
-.marquee-track img {
-  max-height: 50px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: all 0.3s ease;
-}
+      .marquee-track img {
+        max-height: 50px;
+        width: auto;
+        object-fit: contain;
+        opacity: 1;
+        transition: transform 0.3s ease;
+      }
 
-.marquee-track a:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
+      .marquee-track a:hover img {
+        transform: scale(1.05);
+      }
 
-@keyframes scrollMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.mini-ad-card {
-  background: #f8f9fa;
-  border-left: 5px solid #0056b3;
-  border-radius: 8px;
-  padding: 25px 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  margin: 30px 0;
-}
-.mini-ad-card h3 {
-  margin: 5px 0 10px 0;
-  color: #272d33;
-  font-weight: 700;
-}
-.mini-ad-card p {
-  margin-bottom: 0;
-  color: #666;
-}
-.badge-volunteer {
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #0056b3;
-  text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .flex-align-center {
-    display: flex;
-    align-items: center;
-  }
-}
-.callout-banner {
-  position: relative;
-  padding: 4em 0;
-  background-size: cover;
-  background-position: center center;
-}
-.callout-banner .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.65);
-}
-.callout-tag {
-  display: inline-block;
-  background: #f89406;
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
+      @keyframes scrollMarquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .mini-ad-card {
+        background: #f8f9fa;
+        border-left: 5px solid #0056b3;
+        border-radius: 8px;
+        padding: 25px 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        margin: 30px 0;
+      }
+      .mini-ad-card h3 {
+        margin: 5px 0 10px 0;
+        color: #272d33;
+        font-weight: 700;
+      }
+      .mini-ad-card p {
+        margin-bottom: 0;
+        color: #666;
+      }
+      .badge-volunteer {
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #0056b3;
+        text-transform: uppercase;
+      }
+      @media (min-width: 768px) {
+        .flex-align-center {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .callout-banner {
+        position: relative;
+        padding: 4em 0;
+        background-size: cover;
+        background-position: center center;
+      }
+      .callout-banner .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.65);
+      }
+      .callout-tag {
+        display: inline-block;
+        background: #f89406;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      a {
+        font-weight: 700;
+      }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3X8QB24EG0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3X8QB24EG0");
+    </script>
   </head>
   <body
     class="antialiased min-h-screen flex flex-col justify-between bg-slate-900 text-slate-100 font-sans leading-relaxed"
@@ -395,379 +432,784 @@
             class="h-full w-full object-cover object-right"
           />
 
-          <div class="absolute inset-0 bg-gradient-to-t from-white/30 via-white/10 to-slate-50/40 dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-900/90"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-white/30 via-white/10 to-slate-50/40 dark:from-slate-950 dark:via-slate-900/80 dark:to-slate-900/90"
+          ></div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center relative z-10">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center relative z-10"
+        >
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-xs uppercase tracking-widest mb-3 reveal-element mx-auto revealed"
           >
             <span>Spring Registration Opens November 1</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 reveal-element delay-100">
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 reveal-element delay-100"
+          >
             JOIN VALLEY DE ORO LITTLE LEAGUE
           </h1>
 
-          <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-800 dark:text-slate-200 font-normal mb-8 leading-relaxed reveal-element delay-200">
-            Welcome to the upcoming Little League season! Register today to develop skills, build lifelong friendships, and play competitive youth baseball in Spring Valley.
+          <p
+            class="max-w-3xl mx-auto text-base sm:text-lg text-slate-800 dark:text-slate-200 font-normal mb-8 leading-relaxed reveal-element delay-200"
+          >
+            Welcome to the upcoming Little League season! Register today to
+            develop skills, build lifelong friendships, and play competitive
+            youth baseball in Spring Valley.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-element delay-300">
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-element delay-300"
+          >
             <a
               href="#register-now"
               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 min-h-[48px] rounded-full transition-all duration-200 shadow-xl hover:scale-105 border-2 border-amber-950 dark:border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-800 dark:focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
             >
               <span class="text-white">Start Registration</span>
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <svg
+                class="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
               </svg>
             </a>
           </div>
 
           <!-- Key Highlights Ribbon -->
-          <div class="mt-8 pt-6 border-t border-slate-300 dark:border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-center reveal-element delay-300 w-full">
-            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
-              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Cost</div>
-              <div class="text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-400">$195 / Child</div>
+          <div
+            class="mt-8 pt-6 border-t border-slate-300 dark:border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-center reveal-element delay-300 w-full"
+          >
+            <div
+              class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50"
+            >
+              <div
+                class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase"
+              >
+                Cost
+              </div>
+              <div
+                class="text-base sm:text-lg font-bold text-emerald-800 dark:text-emerald-400"
+              >
+                $195 / Child
+              </div>
             </div>
-            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
-              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Ages</div>
-              <div class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">4 to 14 Years</div>
+            <div
+              class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50"
+            >
+              <div
+                class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase"
+              >
+                Ages
+              </div>
+              <div
+                class="text-base sm:text-lg font-bold text-slate-900 dark:text-white"
+              >
+                4 to 14 Years
+              </div>
             </div>
-            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
-              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">Late Fee</div>
-              <div class="text-base sm:text-lg font-bold text-amber-900 dark:text-amber-400">+$30 after Jan 10</div>
+            <div
+              class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50"
+            >
+              <div
+                class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase"
+              >
+                Late Fee
+              </div>
+              <div
+                class="text-base sm:text-lg font-bold text-amber-900 dark:text-amber-400"
+              >
+                +$30 after Jan 10
+              </div>
             </div>
-            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50">
-              <div class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase">New This Season!</div>
-              <div class="text-base sm:text-lg font-bold text-blue-900 dark:text-blue-400">Juniors Division</div>
+            <div
+              class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-800/40 backdrop-blur-sm border border-slate-300 dark:border-slate-700/50"
+            >
+              <div
+                class="text-[11px] text-slate-700 dark:text-slate-400 font-bold uppercase"
+              >
+                New This Season!
+              </div>
+              <div
+                class="text-base sm:text-lg font-bold text-blue-900 dark:text-blue-400"
+              >
+                Juniors Division
+              </div>
             </div>
           </div>
         </div>
       </section>
-	  <section class="relative py-10 overflow-hidden text-center text-white">
-  <!-- Parallax Background Image -->
-  <div 
-    class="absolute inset-0 z-0 bg-cover bg-center bg-fixed opacity-50" 
-    style="background-image: url('images/baserunning.jpg');"
-    aria-hidden="true">
-  </div>
-  
-  <!-- Multi-Stage Dark Overlay for Maximum Readability -->
-  <div class="absolute inset-0 z-10 bg-slate-950/70 backdrop-brightness-75"></div>
+      <section class="relative py-10 overflow-hidden text-center text-white">
+        <!-- Parallax Background Image -->
+        <div
+          class="absolute inset-0 z-0 bg-cover bg-center bg-fixed opacity-50"
+          style="background-image: url(&quot;images/baserunning.jpg&quot;)"
+          aria-hidden="true"
+        ></div>
 
-  <!-- Banner Content -->
-  <div class="relative z-20 max-w-3xl mx-auto px-4">
-    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-      Interested in Coaching or Managerial Roles?
-    </h2>
-    <a 
-      href="mailto:PLAYERAGENT@VALLEYDEOROLL.COM?subject=Coaching%20Inquiry" 
-      class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-xl border-2 border-amber-400"
-    >
-      Become a Coach
-    </a>
-  </div>
-</section>
+        <!-- Multi-Stage Dark Overlay for Maximum Readability -->
+        <div
+          class="absolute inset-0 z-10 bg-slate-950/70 backdrop-brightness-75"
+        ></div>
+
+        <!-- Banner Content -->
+        <div class="relative z-20 max-w-3xl mx-auto px-4">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+          >
+            Interested in Coaching or Managerial Roles?
+          </h2>
+          <a
+            href="mailto:PLAYERAGENT@VALLEYDEOROLL.COM?subject=Coaching%20Inquiry"
+            class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-xl border-2 border-amber-400"
+          >
+            Become a Coach
+          </a>
+        </div>
+      </section>
 
       <!-- League Information & Age Calculator Grid Section -->
-      <section aria-label="League Information" class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800">
+      <section
+        aria-label="League Information"
+        class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800"
+      >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Spring Season</h2>
-            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Find your child's division, location details, and key deadlines.</p>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
+            >
+              Spring Season
+            </h2>
+            <p
+              class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal"
+            >
+              Find your child's division, location details, and key deadlines.
+            </p>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- CARD 1: Location & Calculator -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element"
+            >
               <div>
-                <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <div
+                  class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3"
+                >
+                  <span
+                    class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
                   </span>
-                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">League Info</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                    League Info
+                  </h3>
                 </div>
 
-                <a href="http://maps.apple.com/maps?q=32.7327788,-116.9737356" target="_blank" class="block p-4 rounded-xl card-bg-subtle bg-slate-800 dark:border-slate-700 hover:border-amber-600 transition-colors mb-5 group">
-                  <img src="images/map.png" alt="Valley De Oro field location map">
-                  <p class="text-base font-bold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400">3230 Sweetwater Springs Blvd.</p>
-                  <p class="text-sm text-slate-700 dark:text-slate-300 mt-1">Spring Valley, CA 91977</p>
+                <a
+                  href="http://maps.apple.com/maps?q=32.7327788,-116.9737356"
+                  target="_blank"
+                  class="block p-4 rounded-xl card-bg-subtle bg-slate-800 dark:border-slate-700 hover:border-amber-600 transition-colors mb-5 group"
+                >
+                  <img
+                    src="images/map.png"
+                    alt="Valley De Oro field location map"
+                  />
+                  <p
+                    class="text-base font-bold text-slate-900 dark:text-white group-hover:text-amber-700 dark:group-hover:text-amber-400"
+                  >
+                    3230 Sweetwater Springs Blvd.
+                  </p>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 mt-1">
+                    Spring Valley, CA 91977
+                  </p>
                 </a>
 
-                <div class="border-t-2 border-slate-300 dark:border-slate-700 pt-5">
-                  <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">Residency Boundary Map</h4>
-                  <p id="calcSubtitle" class="text-sm text-slate-700 dark:text-slate-300 mb-4 leading-relaxed font-normal"><a href="https://dt5602vnjxv0c.cloudfront.net/portals/25056/docs/boundary%20map.pdf" target="_blank" class="font-bold">View boundary map.</a></p>
+                <div
+                  class="border-t-2 border-slate-300 dark:border-slate-700 pt-5"
+                >
+                  <h4
+                    class="text-lg font-bold text-slate-900 dark:text-white mb-1"
+                  >
+                    Residency Boundary Map
+                  </h4>
+                  <p
+                    id="calcSubtitle"
+                    class="text-sm text-slate-700 dark:text-slate-300 mb-4 leading-relaxed font-normal"
+                  >
+                    <a
+                      href="https://dt5602vnjxv0c.cloudfront.net/portals/25056/docs/boundary%20map.pdf"
+                      target="_blank"
+                      class="font-bold"
+                      >View boundary map.</a
+                    >
+                  </p>
                 </div>
 
                 <!-- Age Calculator Component -->
-                <div class="border-t-2 border-slate-300 dark:border-slate-700 pt-5">
-                  <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-1">VDO League Age Calculator</h4>
+                <div
+                  class="border-t-2 border-slate-300 dark:border-slate-700 pt-5"
+                >
+                  <h4
+                    class="text-lg font-bold text-slate-900 dark:text-white mb-1"
+                  >
+                    VDO League Age Calculator
+                  </h4>
 
-                  <p class="py-4">Figure out which division your player qualifies for by using this calculator.</p>
+                  <p class="py-4">
+                    Figure out which division your player qualifies for by using
+                    this calculator.
+                  </p>
                   <div class="space-y-4">
                     <!-- Month & Year Row -->
                     <div class="grid grid-cols-2 gap-3">
                       <div>
-                        <label for="birthMonth" class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1">Birth Month</label>
-                        <select id="birthMonth" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
+                        <label
+                          for="birthMonth"
+                          class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1"
+                          >Birth Month</label
+                        >
+                        <select
+                          id="birthMonth"
+                          onchange="calculateLeagueAge()"
+                          class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500"
+                        >
                           <option value="">-- Month --</option>
-                          <option value="0">January</option><option value="1">February</option><option value="2">March</option>
-                          <option value="3">April</option><option value="4">May</option><option value="5">June</option>
-                          <option value="6">July</option><option value="7">August</option><option value="8">September</option>
-                          <option value="9">October</option><option value="10">November</option><option value="11">December</option>
+                          <option value="0">January</option>
+                          <option value="1">February</option>
+                          <option value="2">March</option>
+                          <option value="3">April</option>
+                          <option value="4">May</option>
+                          <option value="5">June</option>
+                          <option value="6">July</option>
+                          <option value="7">August</option>
+                          <option value="8">September</option>
+                          <option value="9">October</option>
+                          <option value="10">November</option>
+                          <option value="11">December</option>
                         </select>
                       </div>
 
                       <div>
-                        <label for="birthYear" class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1">Birth Year</label>
-                        <select id="birthYear" onchange="calculateLeagueAge()" class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500">
+                        <label
+                          for="birthYear"
+                          class="block text-xs font-bold uppercase text-slate-800 dark:text-slate-200 mb-1"
+                          >Birth Year</label
+                        >
+                        <select
+                          id="birthYear"
+                          onchange="calculateLeagueAge()"
+                          class="w-full bg-white dark:bg-slate-900 border-2 border-slate-400 dark:border-slate-600 rounded-lg px-3 py-2.5 text-base font-semibold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500"
+                        >
                           <option value="">-- Year --</option>
                         </select>
                       </div>
                     </div>
 
                     <!-- Age Results Container -->
-                    <div id="resultContainer" class="hidden p-4 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-600 text-center mt-4">
-                      <div id="ageBadge" class="text-xl font-bold text-amber-950 dark:text-amber-200 mb-2"></div>
-                      <div class="text-xs text-slate-900 dark:text-slate-100 font-bold uppercase mb-2">Eligible Division(s):</div>
-                      <div id="divisionList" class="flex flex-wrap justify-center gap-2"></div>
+                    <div
+                      id="resultContainer"
+                      class="hidden p-4 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-600 text-center mt-4"
+                    >
+                      <div
+                        id="ageBadge"
+                        class="text-xl font-bold text-amber-950 dark:text-amber-200 mb-2"
+                      ></div>
+                      <div
+                        class="text-xs text-slate-900 dark:text-slate-100 font-bold uppercase mb-2"
+                      >
+                        Eligible Division(s):
+                      </div>
+                      <div
+                        id="divisionList"
+                        class="flex flex-wrap justify-center gap-2"
+                      ></div>
                     </div>
-                    <p>League age based on the <a href="https://www.littleleague.org/play-little-league/determine-league-age/" target="_blank" class="font-bold">official Little League age calculator</a></p>
+                    <p>
+                      League age based on the
+                      <a
+                        href="https://www.littleleague.org/play-little-league/determine-league-age/"
+                        target="_blank"
+                        class="font-bold"
+                        >official Little League age calculator</a
+                      >
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- CARD 2: Divisions & What's Included -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100"
+            >
               <div>
-                <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-900 dark:text-blue-300 font-bold">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                <div
+                  class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3"
+                >
+                  <span
+                    class="p-2 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-900 dark:text-blue-300 font-bold"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                      />
+                    </svg>
                   </span>
-                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Divisions &amp; Pricing</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                    Divisions &amp; Pricing
+                  </h3>
                 </div>
                 <div class="grid grid-cols-2 gap-2.5 mb-4 items-stretch">
                   <!-- Registration Fee Card -->
-                  <div class="p-2.5 sm:p-3.5 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center flex flex-col justify-center">
-                    <span class="block text-[11px] sm:text-xs font-bold uppercase text-slate-700 dark:text-slate-300 leading-tight">Registration Fee</span>
-                    <div class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">$195 <span class="text-xs font-normal text-slate-700 dark:text-slate-300">/ child</span></div>
+                  <div
+                    class="p-2.5 sm:p-3.5 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center flex flex-col justify-center"
+                  >
+                    <span
+                      class="block text-[11px] sm:text-xs font-bold uppercase text-slate-700 dark:text-slate-300 leading-tight"
+                      >Registration Fee</span
+                    >
+                    <div
+                      class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1"
+                    >
+                      $195
+                      <span
+                        class="text-xs font-normal text-slate-700 dark:text-slate-300"
+                        >/ child</span
+                      >
+                    </div>
                   </div>
 
                   <!-- Late Fee Card -->
-                  <div class="p-2.5 sm:p-3.5 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-center flex flex-col justify-center">
-                    <span class="block text-[11px] sm:text-xs font-bold uppercase text-amber-950 dark:text-amber-300 leading-tight">Late Fee Notice</span>
-                    <div class="text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-200 mt-1">+$30 after Jan 10</div>
+                  <div
+                    class="p-2.5 sm:p-3.5 rounded-xl bg-amber-100 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-center flex flex-col justify-center"
+                  >
+                    <span
+                      class="block text-[11px] sm:text-xs font-bold uppercase text-amber-950 dark:text-amber-300 leading-tight"
+                      >Late Fee Notice</span
+                    >
+                    <div
+                      class="text-xs sm:text-sm font-bold text-amber-900 dark:text-amber-200 mt-1"
+                    >
+                      +$30 after Jan 10
+                    </div>
                   </div>
                 </div>
 
                 <div class="mb-6">
-                  <h4 class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2">Registration Includes</h4>
-                  <ul class="space-y-1.5 text-sm text-slate-800 dark:text-slate-200 font-normal">
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Official League Hat</li>
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Custom Team Jersey</li>
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Team &amp; Individual Pictures</li>
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Tball/Caps Trophies</li>
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Baseballs &amp; Umpires</li>
-                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-amber-600"></span>Practice Gear &amp; Facilities</li>
+                  <h4
+                    class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2"
+                  >
+                    Registration Includes
+                  </h4>
+                  <ul
+                    class="space-y-1.5 text-sm text-slate-800 dark:text-slate-200 font-normal"
+                  >
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Official League Hat
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Custom Team Jersey
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Team &amp; Individual Pictures
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Tball/Caps Trophies
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Baseballs &amp; Umpires
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-amber-600"></span
+                      >Practice Gear &amp; Facilities
+                    </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 id="divisions" class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2">Age Divisions</h4>
-                  <ul class="divisions space-y-2 text-sm text-slate-800 dark:text-slate-200">
-                    <li data-division="tball" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                  <h4
+                    id="divisions"
+                    class="text-xs font-bold uppercase text-amber-900 dark:text-amber-400 tracking-wider mb-2"
+                  >
+                    Age Divisions
+                  </h4>
+                  <ul
+                    class="divisions space-y-2 text-sm text-slate-800 dark:text-slate-200"
+                  >
+                    <li
+                      data-division="tball"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Tball</span>
                       <span class="text-sm font-normal">4–6 year olds</span>
                     </li>
-                    <li data-division="caps" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                    <li
+                      data-division="caps"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Caps</span>
                       <span class="text-sm font-normal">6–8 year olds</span>
                     </li>
-                    <li data-division="minors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                    <li
+                      data-division="minors"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Minors</span>
                       <span class="text-sm font-normal">8–10 year olds</span>
                     </li>
-                    <li data-division="majors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                    <li
+                      data-division="majors"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Majors</span>
                       <span class="text-sm font-normal">10–12 year olds</span>
                     </li>
-                    <li data-division="intermediate" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                    <li
+                      data-division="intermediate"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Intermediate</span>
                       <span class="text-sm font-normal">13 year olds</span>
                     </li>
-                    <li data-division="juniors" class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center">
+                    <li
+                      data-division="juniors"
+                      class="division-row p-2.5 rounded-lg border-2 border-slate-400 dark:border-slate-700 flex justify-between items-center"
+                    >
                       <span class="font-bold div-name">Juniors</span>
                       <span class="text-sm font-normal">14 year olds</span>
                     </li>
                   </ul>
 
                   <div class="py-4 font-normal text-sm">
-                    <p>Registration fees also cover: Trophies for Tball/Caps, Baseballs, Umpires, Land Lease, Trash Service, Porta-Potties, Practice Equipment, Field maintenance and supplies.</p>
+                    <p>
+                      Registration fees also cover: Trophies for Tball/Caps,
+                      Baseballs, Umpires, Land Lease, Trash Service,
+                      Porta-Potties, Practice Equipment, Field maintenance and
+                      supplies.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- CARD 3: Save The Date / Key Deadlines -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200"
+            >
               <div>
-                <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3">
-                  <span class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <div
+                  class="flex items-center gap-3 mb-4 border-b-2 border-slate-300 dark:border-slate-700 pb-3"
+                >
+                  <span
+                    class="p-2 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-400 font-bold"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
                   </span>
-                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">Important Dates</h3>
+                  <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                    Important Dates
+                  </h3>
                 </div>
 
+                <!-- ─── List ──────────────────────────────────────────────────── -->
+                <ol class="px-3 pb-2">
+                  <!-- Standard row — repeat me -->
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          07
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Thur
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        >
+                          Registration Temporarily Closed
+                        </h2>
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        >
+                          Will reopen after assessments
+                        </p>
+                      </div>
+                    </a>
+                  </li>
 
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          09
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Sat
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        ></h2>
+                        <div
+                          class="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-950 border border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-[12px] tracking-wide mb-0 reveal-element mx-auto revealed"
+                        >
+                          <span>Assessments (mandatory)</span>
+                        </div>
 
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        >
+                          Minors · Majors · Intermediates · Juniors | Time: TBA
+                        </p>
+                      </div>
+                    </a>
+                  </li>
 
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          10
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Sun
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        >
+                          CAPs Assessments
+                        </h2>
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        >
+                          Time: TBA
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          11
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Mon
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        >
+                          Registration Re-Opens
+                        </h2>
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        >
+                          10:00 AM · +$30 Late fee apply
+                        </p>
+                      </div>
+                    </a>
+                  </li>
 
-  <!-- ─── List ──────────────────────────────────────────────────── -->
-  <ol class="px-3 pb-2">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          13
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Wed
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        >
+                          Draft Day
+                        </h2>
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        ></p>
+                      </div>
+                    </a>
+                  </li>
 
+                  <li>
+                    <a
+                      href="#"
+                      class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100"
+                    >
+                      <div
+                        class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center"
+                      >
+                        <div
+                          class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500"
+                        >
+                          Jan
+                        </div>
+                        <div
+                          class="text-[22px] font-semibold leading-none tabular-nums tracking-tight"
+                        >
+                          23
+                        </div>
+                        <div
+                          class="mt-0.5 text-[10px] font-medium text-neutral-500"
+                        >
+                          Sat
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <h2
+                          class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"
+                        >
+                          Team Announcements
+                        </h2>
+                        <p
+                          class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"
+                        ></p>
+                      </div>
+                    </a>
+                  </li>
+                </ol>
 
-    <!-- Standard row — repeat me -->
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3
-                transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">07</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Thur</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2">
-            Registration Temporarily Closed
-          </h2>
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500">
-            Will reopen after assessments
-          </p>
-        </div>
-      </a>
-    </li>
-
-	
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">09</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Sat</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2"></h2>
-<div
-            class="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-200 dark:bg-amber-950 border border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-[12px] tracking-wide mb-0 reveal-element mx-auto revealed"
-          >
-            <span>Assessments (mandatory)</span>
-          </div>
-
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500">Minors · Majors · Intermediates · Juniors | Time: TBA</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">10</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Sun</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2">CAPs Assessments</h2>
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500">Time: TBA</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">11</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Mon</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2">Registration Re-Opens</h2>
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500">10:00 AM  · +$30 Late fee apply</p>
-        </div>
-      </a>
-    </li>
-
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">13</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Wed</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2">Draft Day</h2>
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"></p>
-        </div>
-      </a>
-    </li>
-	
-
-    <li>
-      <a href="#"
-         class="flex min-h-[72px] items-start gap-3.5 rounded-2xl px-2 py-3 transition active:bg-neutral-100">
-        <div class="w-[56px] shrink-0 rounded-xl border border-neutral-200 bg-paper py-1.5 text-center">
-          <div class="text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-500">Jan</div>
-          <div class="text-[22px] font-semibold leading-none tabular-nums tracking-tight">23</div>
-          <div class="mt-0.5 text-[10px] font-medium text-neutral-500">Sat</div>
-        </div>
-        <div class="min-w-0 flex-1">
-          <h2 class="text-[17px] font-semibold leading-snug tracking-[-0.01em] line-clamp-2">Team Announcements</h2>
-          <p class="mt-1 text-[13px] leading-snug tabular-nums text-neutral-500"></p>
-        </div>
-      </a>
-    </li>
-  </ol>
-
-
-
-
-
-
-
-
-
-  
-<!-- 
-                <div class="space-y-3 mb-6">
-                  <div class="p-3.5 rounded-xl bg-blue-900 dark:bg-blue-950 text-white border-2 border-blue-950 dark:border-blue-600 text-center">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-200 block">Registration Closing</span>
-                    <div class="text-base font-bold text-white mt-0.5">January 7, 2027 at 5pm</div>
-                  </div>
-                  <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Minors &amp; Majors Assessments</span>
-                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 9, 2027</div>
-                  </div>
-                  <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Caps Assessments</span>
-                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 10, 2027</div>
-                  </div>
-                  <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Draft Day</span>
-                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 13, 2027</div>
-                  </div>
-                  <div class="p-3 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-center">
-                    <span class="text-xs font-bold uppercase text-slate-700 dark:text-slate-300 block">Team Announcements</span>
-                    <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">January 23, 2027</div>
-                  </div>
-                </div> -->
-
-                <div class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-sm text-slate-800 dark:text-slate-200 font-normal space-y-2">
-                  <p><strong>Note:</strong> Team placements depend on completing paperwork and age verification.</p>
-                  <p>Registration closes Jan 7th at 5pm for assessment prep.</p>
+                <div
+                  class="p-4 rounded-xl card-bg-subtle bg-slate-800 border-2 border-slate-600 dark:border-slate-700 text-sm text-slate-800 dark:text-slate-200 font-normal space-y-2"
+                >
+                  <p>
+                    <strong>Note:</strong> Team placements depend on completing
+                    paperwork and age verification.
+                  </p>
+                  <p>Registration closes <strong>Jan 7th at 5pm </strong>for assessment prep.</p>
                 </div>
               </div>
             </div>
@@ -776,20 +1218,48 @@
       </section>
 
       <!-- 3-Step Registration Process Section -->
-      <section id="register-now" aria-label="Registration Steps" class="py-12 bg-slate-100 dark:bg-slate-950 border-b-2 border-slate-300 dark:border-slate-800">
+      <section
+        id="register-now"
+        aria-label="Registration Steps"
+        class="py-12 bg-slate-100 dark:bg-slate-950 border-b-2 border-slate-300 dark:border-slate-800"
+      >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">REGISTER TODAY!</h2>
-            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Follow these 3 simple steps to complete your registration.</p>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
+            >
+              REGISTER TODAY!
+            </h2>
+            <p
+              class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal"
+            >
+              Follow these 3 simple steps to complete your registration.
+            </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- STEP 1 -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element"
+            >
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-xs uppercase mb-3">Step 1</div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Fill Out Forms</h3>
-                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Complete online waivers including the Registration Form, Code of Conduct, Media Release, and Medical Release. Each player requires separate paperwork.</p>
+                <div
+                  class="inline-block px-3 py-1 rounded-full bg-amber-200 dark:bg-amber-950 border-2 border-amber-800 dark:border-amber-500 text-amber-950 dark:text-amber-300 font-bold text-xs uppercase mb-3"
+                >
+                  Step 1
+                </div>
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Fill Out Forms
+                </h3>
+                <p
+                  class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal"
+                >
+                  Complete online waivers including the Registration Form, Code
+                  of Conduct, Media Release, and Medical Release. Each player
+                  requires separate paperwork.
+                </p>
               </div>
               <a
                 href="https://sign.valleydeoroll.com/d/jL8UWnY6kEbyof"
@@ -797,16 +1267,51 @@
                 class="w-full inline-flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-amber-950 dark:border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-800 dark:focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
               >
                 <span class="text-white">Start Paperwork</span>
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
               </a>
+              <div>
+              <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal py-3">
+                If you are registering multiple players, click the <a 
+                href="https://sign.valleydeoroll.com/d/jL8UWnY6kEbyof" target="_blank" >Start Paperwork button </a>again. It will tell you <em>Document has been signed already</em>, just click <strong>RESUBMIT</strong> and you can fill it out again for your other player.
+              </p>
+              </div>
             </div>
 
             <!-- STEP 2 -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-100"
+            >
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-blue-200 dark:bg-blue-950 border-2 border-blue-800 dark:border-blue-500 text-blue-950 dark:text-blue-300 font-bold text-xs uppercase mb-3">Step 2</div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Sports Connect</h3>
-                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Log in or create an account on Sports Connect to submit your completed forms, pay registration fees, and view team schedules.</p>
+                <div
+                  class="inline-block px-3 py-1 rounded-full bg-blue-200 dark:bg-blue-950 border-2 border-blue-800 dark:border-blue-500 text-blue-950 dark:text-blue-300 font-bold text-xs uppercase mb-3"
+                >
+                  Step 2
+                </div>
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Sports Connect
+                </h3>
+                <p
+                  class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal"
+                >
+                  Log in or create an account on Sports Connect to submit your
+                  completed forms, pay registration fees, and view team
+                  schedules.
+                </p>
               </div>
               <a
                 id="sc-link-btn"
@@ -815,22 +1320,59 @@
                 class="w-full inline-flex items-center justify-center gap-2 bg-blue-900 hover:bg-blue-950 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-blue-950 dark:border-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
               >
                 <span class="text-white">Create Account / Log In</span>
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
               </a>
             </div>
 
             <!-- STEP 3 -->
-            <div class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200">
+            <div
+              class="accessible-card rounded-2xl p-6 flex flex-col justify-between reveal-element delay-200"
+            >
               <div>
-                <div class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-slate-600 dark:border-slate-600 text-slate-900 dark:text-slate-200 font-bold text-xs uppercase mb-3">Step 3</div>
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Tell Your Friends</h3>
-                <p class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal">Spread the word! Share Valley De Oro Little League registration with neighborhood families and friends.</p>
+                <div
+                  class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-slate-600 dark:border-slate-600 text-slate-900 dark:text-slate-200 font-bold text-xs uppercase mb-3"
+                >
+                  Step 3
+                </div>
+                <h3
+                  class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                  Tell Your Friends
+                </h3>
+                <p
+                  class="text-sm text-slate-700 dark:text-slate-300 mb-6 leading-relaxed font-normal"
+                >
+                  Spread the word! Share Valley De Oro Little League
+                  registration with neighborhood families and friends.
+                </p>
               </div>
               <button
                 id="share-btn"
                 class="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold text-base px-6 py-3 min-h-[48px] rounded-full transition-all duration-200 shadow-lg hover:scale-[1.02] border-2 border-slate-950 dark:border-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-800 dark:focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
               >
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z"/></svg>
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12,1L8,5H11V14H13V5H16M18,23H6C4.89,23 4,22.1 4,21V9A2,2 0 0,1 6,7H9V9H6V21H18V9H15V7H18A2,2 0 0,1 20,9V21A2,2 0 0,1 18,23Z"
+                  />
+                </svg>
                 <span class="text-white">Share Registration Link</span>
               </button>
             </div>
@@ -839,50 +1381,221 @@
       </section>
 
       <!-- FREQUENTLY ASKED QUESTIONS -->
-      <section aria-label="Frequently Asked Questions" class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800">
+      <section
+        aria-label="Frequently Asked Questions"
+        class="py-12 bg-slate-200 dark:bg-slate-900 border-b-2 border-slate-300 dark:border-slate-800"
+      >
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-10 reveal-element">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">FREQUENTLY ASKED QUESTIONS</h2>
-            <p class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal">Find answers to common questions about registration, age divisions, gear, and field schedules.</p>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight"
+            >
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+            <p
+              class="text-slate-700 dark:text-slate-300 text-base sm:text-lg mt-2 font-normal"
+            >
+              Find answers to common questions about registration, age
+              divisions, gear, and field schedules.
+            </p>
           </div>
 
           <!-- FAQ Category 1 -->
           <div class="mb-8 reveal-element">
-            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Registration &amp; Eligibility</h3>
+            <h3
+              class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4"
+            >
+              Registration &amp; Eligibility
+            </h3>
             <div class="space-y-3">
-              <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
-                  <span>Are there residency or boundary requirements to play at VDO?</span>
-                  <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
-                    <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
+                  <span
+                    >Are there residency or boundary requirements to play at
+                    VDO?</span
+                  >
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
-                  Yes, please check the boundary map to confirm. If you would like to play at VDO and you live outside the designated residential or school boundary, a waiver must be filled out. Please connect with our <a href="mailto:playeragent@valleydeoroll.com">playeragent@valleydeoroll.com</a> for more details
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  Yes, please check the boundary map to confirm. If you would
+                  like to play at VDO and you live outside the designated
+                  residential or school boundary, a waiver must be filled out.
+                  Please connect with our
+                  <a href="mailto:playeragent@valleydeoroll.com"
+                    >playeragent@valleydeoroll.com</a
+                  >
+                  for more details
                 </div>
               </details>
 
-              <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
-                  <span>What documents are required to complete registration?</span>
-                  <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
-                    <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
+                  <span
+                    >What documents are required to complete registration?</span
+                  >
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
-                  You will need proof of age (birth certificate) and online consent forms including the medical release, code of conduct, and release waivers. You can <a href="https://sign.valleydeoroll.com/d/jL8UWnY6kEbyof" target="_blank">fill them out here.</a>
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  You will need proof of age (birth certificate) and online
+                  consent forms including the medical release, code of conduct,
+                  and release waivers. You can
+                  <a
+                    href="https://sign.valleydeoroll.com/d/jL8UWnY6kEbyof"
+                    target="_blank"
+                    >fill them out here.</a
+                  >
                 </div>
               </details>
 
-              <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
+                  <span>I did not get a copy of my signed documents</span>
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  The emails will be coming from <code>playeragent@valleydeoroll.com</code> with the subject <strong>Spring 2027 Documents for [Player Name] Are Ready</strong>. If you have checked your spam and still haven't received the documents after an hour, you can reach out to it@valleydeoroll.com and we can re-trigger the email. 
+                </div>
+              </details>
+
+
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
+                  <span
+                    >What if I have multiple players?</span
+                  >
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  Each player will need to have their own documents filled out. To initiate another form, <a href="https://sign.valleydeoroll.com/d/jL8UWnY6kEbyof" target="_blank"> click here</a>. If it says <em>Document has been signed already</em>, click <strong>RESUBMIT</strong>. You will get a copy of your player's documents just like when you did for your other player. Keep an eye out for an email with the subject <em>Spring 2027 Documents for [Player Name] Are Ready</em>
+                </div>
+              </details>
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
                   <span>Where do I upload my signed documents?</span>
-                  <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
-                    <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
-                  During the registration process on <a href="https://login.stacksports.com/login?client_id=612b0399b1854a002e427f78&redirect_uri=https://core-api.bluesombrero.com/login/redirect/portal/25056&app_name=Valley+De+Oro+Little+League&portalid=25056&instancekey=tshq" target="_blank">Sports Connect</a>, you will be asked for documents along the way. You can upload the files that were emailed to you during that process.
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  During the registration process on
+                  <a
+                    href="https://login.stacksports.com/login?client_id=612b0399b1854a002e427f78&redirect_uri=https://core-api.bluesombrero.com/login/redirect/portal/25056&app_name=Valley+De+Oro+Little+League&portalid=25056&instancekey=tshq"
+                    target="_blank"
+                    >Sports Connect</a
+                  >, you will be asked to <strong>Upload Your Completed _______ Form</strong>. You can click the button that says <strong>Choose File</strong> to upload the files that were emailed to you.
                 </div>
               </details>
             </div>
@@ -890,17 +1603,46 @@
 
           <!-- FAQ Category 2 -->
           <div class="mb-8 reveal-element">
-            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Divisions &amp; Player Assessments</h3>
+            <h3
+              class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4"
+            >
+              Divisions &amp; Player Assessments
+            </h3>
             <div class="space-y-3">
-              <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
                   <span>How is my child's division determined?</span>
-                  <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
-                    <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
-                  Division placement is primarily based on official Little League Age using our calculator above. For older divisions (Minors, Majors, Intermediates, Juniors), player evaluations and skill assessments are used to ensure balanced team creation.
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  Division placement is primarily based on official Little
+                  League Age using our calculator above. For older divisions
+                  (Minors, Majors, Intermediates, Juniors), player evaluations
+                  and skill assessments are used to ensure balanced team
+                  creation.
                 </div>
               </details>
             </div>
@@ -908,17 +1650,47 @@
 
           <!-- FAQ Category 3 -->
           <div class="reveal-element">
-            <h3 class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4">Schedules &amp; Equipment</h3>
+            <h3
+              class="text-xl font-bold text-amber-900 dark:text-amber-400 mb-4"
+            >
+              Schedules &amp; Equipment
+            </h3>
             <div class="space-y-3">
-              <details class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                <summary class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
-                  <span>What equipment does the league provide vs what families need to buy?</span>
-                  <span class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white">
-                    <svg class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              <details
+                class="accessible-card rounded-xl group border-2 border-slate-300 dark:border-slate-700 overflow-hidden"
+              >
+                <summary
+                  class="flex items-center justify-between p-4 cursor-pointer font-bold text-base text-slate-900 dark:text-white hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
+                >
+                  <span
+                    >What equipment does the league provide vs what families
+                    need to buy?</span
+                  >
+                  <span
+                    class="ml-4 flex-shrink-0 p-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white"
+                  >
+                    <svg
+                      class="chevron w-5 h-5 transition-transform duration-200 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2.5"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </span>
                 </summary>
-                <div class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3">
-                  The league provides an official team jersey and hat. Families are generally responsible for purchasing a fielding glove, cleats, baseball pants, belt, and personal bat/helmet.
+                <div
+                  class="px-4 pb-5 text-slate-700 dark:text-slate-300 text-sm font-normal border-t-2 border-slate-300 dark:border-slate-700 pt-3"
+                >
+                  The league provides an official team jersey and hat. Families
+                  are generally responsible for purchasing a fielding glove,
+                  cleats, baseball pants, belt, and personal bat/helmet.
                 </div>
               </details>
             </div>
@@ -926,201 +1698,478 @@
         </div>
       </section>
 
-<section class="relative overflow-hidden py-16 bg-slate-950 text-white">
-  <!-- Parallax Background Layer -->
-  <div 
-    class="parallax-bg absolute inset-0 z-0 bg-cover bg-center opacity-60" 
-    style="background-image: url('images/baserunning.jpg');"
-    aria-hidden="true">
-  </div>
-  
-  <!-- Gradient Overlay to boost contrast -->
-  <div class="absolute inset-0 z-10 bg-gradient-to-r from-slate-950/80 via-slate-900/75 to-slate-950/80"></div>
+      <section class="relative overflow-hidden py-16 bg-slate-950 text-white">
+        <!-- Parallax Background Layer -->
+        <div
+          class="parallax-bg absolute inset-0 z-0 bg-cover bg-center opacity-60"
+          style="background-image: url(&quot;images/baserunning.jpg&quot;)"
+          aria-hidden="true"
+        ></div>
 
-  <!-- Content Container with Glassmorphic Contrast Card -->
-  <div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 relative z-20 text-center">
-    <div class="bg-slate-900/80 backdrop-blur-md border-2 border-slate-700/80 rounded-2xl p-8 sm:p-10 shadow-2xl">
-      <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3 drop-shadow-md">
-        Have Additional Questions?
-      </h2>
-      <p class="text-base sm:text-lg text-slate-200 font-normal max-w-2xl mx-auto mb-6 leading-relaxed">
-        Our Player Agent and league board members are happy to help!
-      </p>
-      <a 
-        href="mailto:PLAYERAGENT@VALLEYDEOROLL.COM?subject=Coaching%20Inquiry" 
-        class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-lg border-2 border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+        <!-- Gradient Overlay to boost contrast -->
+        <div
+          class="absolute inset-0 z-10 bg-gradient-to-r from-slate-950/80 via-slate-900/75 to-slate-950/80"
+        ></div>
+
+        <!-- Content Container with Glassmorphic Contrast Card -->
+        <div
+          class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 relative z-20 text-center"
+        >
+          <div
+            class="bg-slate-900/80 backdrop-blur-md border-2 border-slate-700/80 rounded-2xl p-8 sm:p-10 shadow-2xl"
+          >
+            <h2
+              class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3 drop-shadow-md"
+            >
+              Have Additional Questions?
+            </h2>
+            <p
+              class="text-base sm:text-lg text-slate-200 font-normal max-w-2xl mx-auto mb-6 leading-relaxed"
+            >
+              Our Player Agent and league board members are happy to help!
+            </p>
+            <a
+              href="mailto:PLAYERAGENT@VALLEYDEOROLL.COM?subject=Coaching%20Inquiry"
+              class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-lg border-2 border-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            >
+              <span>playeragent@valleydeoroll.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sponsor-marquee">
+          <div class="marquee-track">
+            <!-- First Copy of Logos -->
+            <a
+              href="https://www.cityexperiences.com/city-cruises/"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/citycruises.png" alt="City Cruises"
+            /></a>
+            <a
+              href="https://www.jamulpestcontrol.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/jamulpestcontrol.png"
+                alt="Jamul Pest Control"
+            /></a>
+            <span><img src="./images/sponsors/tdm.png" alt="TDM" /></span>
+            <a
+              href="https://www.facebook.com/reedsconst/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/reedsconstruction.png"
+                alt="Reeds Construction"
+            /></a>
+            <a href="http://www.altadrywall.com/" target="_blank" rel="noopener"
+              ><img src="./images/sponsors/altadrywall.png" alt="Alta Drywall"
+            /></a>
+            <a
+              href="http://www.pacificsteelindustries.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/pacificsteel.png"
+                alt="Pacific Steel Industries"
+            /></a>
+            <a
+              href="https://www.lamesaglass.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/lamesaglass.png" alt="La Mesa Glass"
+            /></a>
+            <a
+              href="https://www.fusionengtech.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/fusion.png"
+                alt="Fusion Engineering and Technology"
+            /></a>
+            <a href="https://amscaf.com/" target="_blank" rel="noopener"
+              ><img
+                src="./images/sponsors/americanscaffolding.png"
+                alt="American Scaffolding"
+            /></a>
+            <a
+              href="https://www.chulavistagc.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/chulavistagolfcourse.png"
+                alt="Chula Vista Golf Course"
+            /></a>
+            <a href="https://lamesa.al-ed.com/" target="_blank" rel="noopener"
+              ><img
+                src="./images/sponsors/alandeds.png"
+                alt="Al &amp; Ed's Autosound"
+            /></a>
+            <a
+              href="https://www.alpineeuroparts.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/veeparts.png"
+                alt="Alpine Euro Parts"
+            /></a>
+            <a
+              href="https://www.facebook.com/ApexGlassCo/"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/apexglass.png" alt="Apex Glass Co"
+            /></a>
+            <a
+              href="https://maggiescafe2014.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/maggiescafe.png" alt="Maggie's Cafe"
+            /></a>
+            <a
+              href="https://www.servpro.com/locations/ca/servpro-of-spring-valley-jamul"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/servpro.png" alt="ServPro"
+            /></a>
+            <a
+              href="https://www.cesaccessgroup.com/"
+              target="_blank"
+              rel="noopener"
+              ><img src="./images/sponsors/ces.png" alt="CES Access Group"
+            /></a>
+            <a href="https://www.wcis-corp.com/" target="_blank" rel="noopener"
+              ><img
+                src="./images/sponsors/westcoastinspection.png"
+                alt="West Coast Inspection Services"
+            /></a>
+            <a
+              href="https://www.roundtablepizza.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/roundtablepizza.png"
+                alt="Round Table Pizza"
+            /></a>
+            <a
+              href="https://www.playitagainsports.com/locations/la-mesa-ca"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/playitagainsports.png"
+                alt="Play It Again Sports"
+            /></a>
+            <a
+              href="http://www.buxconsheetmetal.com/"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/buxcon-logo.png"
+                alt="Buxcon Sheet Metal Inc"
+            /></a>
+            <a
+              href="https://network.procore.com/p/jd-mechanical-jamul"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="./images/sponsors/jdmechanical.png"
+                alt="JD Mechanical"
+            /></a>
+
+            <!-- Duplicate Copy of Logos for Infinite Loop -->
+            <a
+              href="https://www.cityexperiences.com/city-cruises/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/citycruises.png" alt=""
+            /></a>
+            <a
+              href="https://www.jamulpestcontrol.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/jamulpestcontrol.png" alt=""
+            /></a>
+            <span aria-hidden="true"
+              ><img src="./images/sponsors/tdm.png" alt=""
+            /></span>
+            <a
+              href="https://www.facebook.com/reedsconst/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/reedsconstruction.png" alt=""
+            /></a>
+            <a
+              href="http://www.altadrywall.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/altadrywall.png" alt=""
+            /></a>
+            <a
+              href="http://www.pacificsteelindustries.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/pacificsteel.png" alt=""
+            /></a>
+            <a
+              href="https://www.lamesaglass.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/lamesaglass.png" alt=""
+            /></a>
+            <a
+              href="https://www.fusionengtech.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/fusion.png" alt=""
+            /></a>
+            <a
+              href="https://amscaf.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/americanscaffolding.png" alt=""
+            /></a>
+            <a
+              href="https://www.chulavistagc.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/chulavistagolfcourse.png" alt=""
+            /></a>
+            <a
+              href="https://lamesa.al-ed.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/alandeds.png" alt=""
+            /></a>
+            <a
+              href="https://www.alpineeuroparts.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/veeparts.png" alt=""
+            /></a>
+            <a
+              href="https://www.facebook.com/ApexGlassCo/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/apexglass.png" alt=""
+            /></a>
+            <a
+              href="https://maggiescafe2014.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/maggiescafe.png" alt=""
+            /></a>
+            <a
+              href="https://www.servpro.com/locations/ca/servpro-of-spring-valley-jamul"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/servpro.png" alt=""
+            /></a>
+            <a
+              href="https://www.cesaccessgroup.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/ces.png" alt=""
+            /></a>
+            <a
+              href="https://www.wcis-corp.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/westcoastinspection.png" alt=""
+            /></a>
+            <a
+              href="https://www.roundtablepizza.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/roundtablepizza.png" alt=""
+            /></a>
+            <a
+              href="https://www.playitagainsports.com/locations/la-mesa-ca"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/playitagainsports.png" alt=""
+            /></a>
+            <a
+              href="http://www.buxconsheetmetal.com/"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/buxcon-logo.png" alt=""
+            /></a>
+            <a
+              href="https://network.procore.com/p/jd-mechanical-jamul"
+              target="_blank"
+              rel="noopener"
+              aria-hidden="true"
+              ><img src="./images/sponsors/jdmechanical.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-label="Championship Showcase"
+        class="py-12 bg-slate-900 border-b-2 border-slate-800 text-white"
       >
-        <span>playeragent@valleydeoroll.com</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-	  <section>
-		<div class="sponsor-marquee">
-  <div class="marquee-track">
-    <!-- First Copy of Logos -->
-    <a href="https://www.cityexperiences.com/city-cruises/" target="_blank" rel="noopener"><img src="./images/sponsors/citycruises.png" alt="City Cruises"></a>
-    <a href="https://www.jamulpestcontrol.com/" target="_blank" rel="noopener"><img src="./images/sponsors/jamulpestcontrol.png" alt="Jamul Pest Control"></a>
-    <span><img src="./images/sponsors/tdm.png" alt="TDM"></span>
-    <a href="https://www.facebook.com/reedsconst/" target="_blank" rel="noopener"><img src="./images/sponsors/reedsconstruction.png" alt="Reeds Construction"></a>
-    <a href="http://www.altadrywall.com/" target="_blank" rel="noopener"><img src="./images/sponsors/altadrywall.png" alt="Alta Drywall"></a>
-    <a href="http://www.pacificsteelindustries.com/" target="_blank" rel="noopener"><img src="./images/sponsors/pacificsteel.png" alt="Pacific Steel Industries"></a>
-    <a href="https://www.lamesaglass.com/" target="_blank" rel="noopener"><img src="./images/sponsors/lamesaglass.png" alt="La Mesa Glass"></a>
-    <a href="https://www.fusionengtech.com/" target="_blank" rel="noopener"><img src="./images/sponsors/fusion.png" alt="Fusion Engineering and Technology"></a>
-    <a href="https://amscaf.com/" target="_blank" rel="noopener"><img src="./images/sponsors/americanscaffolding.png" alt="American Scaffolding"></a>
-    <a href="https://www.chulavistagc.com/" target="_blank" rel="noopener"><img src="./images/sponsors/chulavistagolfcourse.png" alt="Chula Vista Golf Course"></a>
-    <a href="https://lamesa.al-ed.com/" target="_blank" rel="noopener"><img src="./images/sponsors/alandeds.png" alt="Al &amp; Ed's Autosound"></a>
-    <a href="https://www.alpineeuroparts.com/" target="_blank" rel="noopener"><img src="./images/sponsors/veeparts.png" alt="Alpine Euro Parts"></a>
-    <a href="https://www.facebook.com/ApexGlassCo/" target="_blank" rel="noopener"><img src="./images/sponsors/apexglass.png" alt="Apex Glass Co"></a>
-    <a href="https://maggiescafe2014.com/" target="_blank" rel="noopener"><img src="./images/sponsors/maggiescafe.png" alt="Maggie's Cafe"></a>
-    <a href="https://www.servpro.com/locations/ca/servpro-of-spring-valley-jamul" target="_blank" rel="noopener"><img src="./images/sponsors/servpro.png" alt="ServPro"></a>
-    <a href="https://www.cesaccessgroup.com/" target="_blank" rel="noopener"><img src="./images/sponsors/ces.png" alt="CES Access Group"></a>
-    <a href="https://www.wcis-corp.com/" target="_blank" rel="noopener"><img src="./images/sponsors/westcoastinspection.png" alt="West Coast Inspection Services"></a>
-    <a href="https://www.roundtablepizza.com/" target="_blank" rel="noopener"><img src="./images/sponsors/roundtablepizza.png" alt="Round Table Pizza"></a>
-    <a href="https://www.playitagainsports.com/locations/la-mesa-ca" target="_blank" rel="noopener"><img src="./images/sponsors/playitagainsports.png" alt="Play It Again Sports"></a>
-    <a href="http://www.buxconsheetmetal.com/" target="_blank" rel="noopener"><img src="./images/sponsors/buxcon-logo.png" alt="Buxcon Sheet Metal Inc"></a>
-    <a href="https://network.procore.com/p/jd-mechanical-jamul" target="_blank" rel="noopener"><img src="./images/sponsors/jdmechanical.png" alt="JD Mechanical"></a>
-
-    <!-- Duplicate Copy of Logos for Infinite Loop -->
-    <a href="https://www.cityexperiences.com/city-cruises/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/citycruises.png" alt=""></a>
-    <a href="https://www.jamulpestcontrol.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/jamulpestcontrol.png" alt=""></a>
-    <span aria-hidden="true"><img src="./images/sponsors/tdm.png" alt=""></span>
-    <a href="https://www.facebook.com/reedsconst/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/reedsconstruction.png" alt=""></a>
-    <a href="http://www.altadrywall.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/altadrywall.png" alt=""></a>
-    <a href="http://www.pacificsteelindustries.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/pacificsteel.png" alt=""></a>
-    <a href="https://www.lamesaglass.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/lamesaglass.png" alt=""></a>
-    <a href="https://www.fusionengtech.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/fusion.png" alt=""></a>
-    <a href="https://amscaf.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/americanscaffolding.png" alt=""></a>
-    <a href="https://www.chulavistagc.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/chulavistagolfcourse.png" alt=""></a>
-    <a href="https://lamesa.al-ed.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/alandeds.png" alt=""></a>
-    <a href="https://www.alpineeuroparts.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/veeparts.png" alt=""></a>
-    <a href="https://www.facebook.com/ApexGlassCo/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/apexglass.png" alt=""></a>
-    <a href="https://maggiescafe2014.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/maggiescafe.png" alt=""></a>
-    <a href="https://www.servpro.com/locations/ca/servpro-of-spring-valley-jamul" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/servpro.png" alt=""></a>
-    <a href="https://www.cesaccessgroup.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/ces.png" alt=""></a>
-    <a href="https://www.wcis-corp.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/westcoastinspection.png" alt=""></a>
-    <a href="https://www.roundtablepizza.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/roundtablepizza.png" alt=""></a>
-    <a href="https://www.playitagainsports.com/locations/la-mesa-ca" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/playitagainsports.png" alt=""></a>
-    <a href="http://www.buxconsheetmetal.com/" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/buxcon-logo.png" alt=""></a>
-    <a href="https://network.procore.com/p/jd-mechanical-jamul" target="_blank" rel="noopener" aria-hidden="true"><img src="./images/sponsors/jdmechanical.png" alt=""></a>
-  </div>
-</div>
-	  </section>
-	  <section aria-label="Championship Showcase" class="py-12 bg-slate-900 border-b-2 border-slate-800 text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-500 text-amber-300 font-bold text-xs uppercase tracking-widest mb-3">
-        <span>🏆 Championship Tradition</span>
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        CELEBRATING OUR CHAMPIONS
-      </h2>
-      <p class="text-slate-300 text-base sm:text-lg mt-2 font-normal">
-        Congratulations to our Valley De Oro teams bringing home championship banners!
-      </p>
-    </div>
-
-    <!-- Championship Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Card 1: Team 03 (District 66 Champs 9-11) -->
-      <div class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element transition-transform duration-300 hover:scale-[1.02]">
-        <div>
-          <div class="relative h-56 overflow-hidden bg-slate-950">
-            <img 
-              src="images/team03.png" 
-              alt="Valley De Oro District 66 Champions 9-11 Year Old Baseball Team" 
-              class="w-full h-full object-cover object-center"
-            />
-            <span class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400">
-              District 66
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">
-              District 66 Champions
-            </h3>
-            <p class="text-amber-400 font-semibold text-sm mb-3">
-              9–11 Year Old Division
-            </p>
-            <p class="text-slate-300 text-sm leading-relaxed font-normal">
-              Representing Valley De Oro with pride, taking home the District 66 Championship banner!
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center max-w-3xl mx-auto mb-10 reveal-element">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950 border border-amber-500 text-amber-300 font-bold text-xs uppercase tracking-widest mb-3"
+            >
+              <span>🏆 Championship Tradition</span>
+            </div>
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight"
+            >
+              CELEBRATING OUR CHAMPIONS
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mt-2 font-normal">
+              Congratulations to our Valley De Oro teams bringing home
+              championship banners!
             </p>
           </div>
-        </div>
-      </div>
 
-      <!-- Card 2: Team 02 (2024 8-10 Champs) -->
-      <div class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element delay-100 transition-transform duration-300 hover:scale-[1.02]">
-        <div>
-          <div class="relative h-56 overflow-hidden bg-slate-950">
-            <img 
-              src="images/team01.png" 
-              alt="Valley De Oro 2024 8-10 Division Champions" 
-              class="w-full h-full object-cover object-center"
-            />
-            <span class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400">
-              2024 Champions
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">
-              2024 Division Champions
-            </h3>
-            <p class="text-amber-400 font-semibold text-sm mb-3">
-              8–10 Year Old Division
-            </p>
-            <p class="text-slate-300 text-sm leading-relaxed font-normal">
-              An incredible season capped off with a championship title for our 8–10 year old division squad.
-            </p>
+          <!-- Championship Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Team 03 (District 66 Champs 9-11) -->
+            <div
+              class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <div>
+                <div class="relative h-56 overflow-hidden bg-slate-950">
+                  <img
+                    src="images/team03.png"
+                    alt="Valley De Oro District 66 Champions 9-11 Year Old Baseball Team"
+                    class="w-full h-full object-cover object-center"
+                  />
+                  <span
+                    class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400"
+                  >
+                    2026 Champions
+                  </span>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    District 66 Champions
+                  </h3>
+                  <p class="text-amber-400 font-semibold text-sm mb-3">
+                    9–11 Year Old Division
+                  </p>
+                  <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                    Representing Valley De Oro with pride, taking home the
+                    District 66 Championship banner!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Team 02 (2024 8-10 Champs) -->
+            <div
+              class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element delay-100 transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <div>
+                <div class="relative h-56 overflow-hidden bg-slate-950">
+                  <img
+                    src="images/team01.png"
+                    alt="Valley De Oro 2024 8-10 Division Champions"
+                    class="w-full h-full object-cover object-center"
+                  />
+                  <span
+                    class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400"
+                  >
+                    2024 Champions
+                  </span>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Division Champions
+                  </h3>
+                  <p class="text-amber-400 font-semibold text-sm mb-3">
+                    8–10 Year Old Division
+                  </p>
+                  <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                    An incredible season capped off with a championship title
+                    for our 8–10 year old division squad.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Team 01 (2024 T.O.C. Junior League) -->
+            <div
+              class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element delay-200 transition-transform duration-300 hover:scale-[1.02]"
+            >
+              <div>
+                <div class="relative h-56 overflow-hidden bg-slate-950">
+                  <img
+                    src="images/team02.png"
+                    alt="Valley De Oro 2024 Tournament of Champions Junior League Team"
+                    class="w-full h-full object-cover object-center"
+                  />
+                  <span
+                    class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400"
+                  >
+                    2024 Champions
+                  </span>
+                </div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    T.O.C. Champions
+                  </h3>
+                  <p class="text-amber-400 font-semibold text-sm mb-3">
+                    Junior League Division
+                  </p>
+                  <p class="text-slate-300 text-sm leading-relaxed font-normal">
+                    Tournament of Champions winners proving hard work and
+                    teamwork pay off on the big stage!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Card 3: Team 01 (2024 T.O.C. Junior League) -->
-      <div class="accessible-card rounded-2xl overflow-hidden flex flex-col justify-between reveal-element delay-200 transition-transform duration-300 hover:scale-[1.02]">
-        <div>
-          <div class="relative h-56 overflow-hidden bg-slate-950">
-            <img 
-              src="images/team02.png" 
-              alt="Valley De Oro 2024 Tournament of Champions Junior League Team" 
-              class="w-full h-full object-cover object-center"
-            />
-            <span class="absolute top-3 left-3 bg-amber-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase shadow-md border border-amber-400">
-              2024 T.O.C.
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">
-              T.O.C. Champions
-            </h3>
-            <p class="text-amber-400 font-semibold text-sm mb-3">
-              Junior League Division
-            </p>
-            <p class="text-slate-300 text-sm leading-relaxed font-normal">
-              Tournament of Champions winners proving hard work and teamwork pay off on the big stage!
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
     </main>
 
-<!-- Footer Landmark -->
-    <footer role="contentinfo" class="bg-slate-950 text-slate-200 border-t-2 border-slate-800 py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <!-- Footer Landmark -->
+    <footer
+      role="contentinfo"
+      class="bg-slate-950 text-slate-200 border-t-2 border-slate-800 py-8"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6"
+      >
         <!-- Logo & Address -->
         <div class="flex items-center gap-3">
-          <img src="images/VDO-Logo-2025.png" alt="Valley De Oro Little League logo" class="h-10 w-auto" />
+          <img
+            src="images/VDO-Logo-2025.png"
+            alt="Valley De Oro Little League logo"
+            class="h-10 w-auto"
+          />
           <div class="text-sm">
             <p class="font-bold text-white">Valley De Oro Little League</p>
-            <p class="text-slate-400">3230 Sweetwater Springs Blvd, Spring Valley, CA 91978</p>
+            <p class="text-slate-400">
+              3230 Sweetwater Springs Blvd, Spring Valley, CA 91978
+            </p>
           </div>
         </div>
 
@@ -1133,8 +2182,14 @@
             aria-label="Valley De Oro Little League Facebook"
             class="p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            <svg
+              class="w-5 h-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
             </svg>
           </a>
 
@@ -1145,8 +2200,14 @@
             aria-label="Valley De Oro Little League Instagram"
             class="p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            <svg
+              class="w-5 h-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
             </svg>
           </a>
 
@@ -1157,8 +2218,14 @@
             aria-label="Valley De Oro Little League YouTube"
             class="p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <svg
+              class="w-5 h-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
             </svg>
           </a>
 
@@ -1169,14 +2236,22 @@
             aria-label="Valley De Oro Little League GitHub"
             class="p-2 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-amber-400 border border-slate-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            <svg
+              class="w-5 h-5 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
             </svg>
           </a>
         </div>
 
         <!-- Copyright -->
-        <div class="text-slate-400 text-sm text-center sm:text-right font-normal">
+        <div
+          class="text-slate-400 text-sm text-center sm:text-right font-normal"
+        >
           &copy; 2026 Valley De Oro Little League. All Rights Reserved.
         </div>
       </div>
@@ -1188,8 +2263,10 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         // Scroll observer for reveal animations (respects reduced motion settings)
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
         if (!prefersReducedMotion) {
           const observer = new IntersectionObserver(
             (entries, obs) => {
@@ -1203,9 +2280,13 @@
             { threshold: 0.1 },
           );
 
-          document.querySelectorAll(".reveal-element").forEach((el) => observer.observe(el));
+          document
+            .querySelectorAll(".reveal-element")
+            .forEach((el) => observer.observe(el));
         } else {
-          document.querySelectorAll(".reveal-element").forEach((el) => el.classList.add("revealed"));
+          document
+            .querySelectorAll(".reveal-element")
+            .forEach((el) => el.classList.add("revealed"));
         }
 
         // Dynamic Year Calculation for Age Calculator
@@ -1231,11 +2312,13 @@
           shareBtn.addEventListener("click", (e) => {
             e.preventDefault();
             if (navigator.share) {
-              navigator.share({
-                title: document.title,
-                text: "Registration is open for Valley De Oro Little League! Register your player here: ",
-                url: window.location.href,
-              }).catch(console.error);
+              navigator
+                .share({
+                  title: document.title,
+                  text: "Registration is open for Valley De Oro Little League! Register your player here: ",
+                  url: window.location.href,
+                })
+                .catch(console.error);
             } else {
               navigator.clipboard.writeText(window.location.href);
               alert("Registration link copied to clipboard!");
@@ -1247,10 +2330,17 @@
       // Dynamic Little League Age Calculation and Table Highlighting
       function calculateLeagueAge() {
         const ageToDivisions = {
-          4: ["Tball"], 5: ["Tball"], 6: ["Tball", "Caps"], 7: ["Caps"],
-          8: ["Caps", "Minors"], 9: ["Minors"], 10: ["Minors", "Majors"],
-          11: ["Majors"], 12: ["Majors"], 13: ["Intermediate"],
-          14: ["Juniors"]
+          4: ["Tball"],
+          5: ["Tball"],
+          6: ["Tball", "Caps"],
+          7: ["Caps"],
+          8: ["Caps", "Minors"],
+          9: ["Minors"],
+          10: ["Minors", "Majors"],
+          11: ["Majors"],
+          12: ["Majors"],
+          13: ["Intermediate"],
+          14: ["Juniors"],
         };
 
         const monthVal = document.getElementById("birthMonth").value;
@@ -1299,7 +2389,9 @@
             const divNameEl = row.querySelector(".div-name");
             if (divNameEl) {
               const rowDivName = divNameEl.textContent.trim().toLowerCase();
-              const isEligible = eligibleDivs.some((d) => d.toLowerCase() === rowDivName);
+              const isEligible = eligibleDivs.some(
+                (d) => d.toLowerCase() === rowDivName,
+              );
 
               if (isEligible) {
                 row.classList.add("eligible-row");
@@ -1312,7 +2404,8 @@
           });
         } else {
           ageBadge.textContent = `League Age: ${age}`;
-          divisionList.innerHTML = '<span class="text-sm text-red-700 dark:text-red-400 font-bold">Player falls outside standard Little League age parameters (4-14).</span>';
+          divisionList.innerHTML =
+            '<span class="text-sm text-red-700 dark:text-red-400 font-bold">Player falls outside standard Little League age parameters (4-14).</span>';
         }
       }
 
@@ -1321,15 +2414,25 @@
 
         const updateHeaderOnScroll = () => {
           if (window.scrollY > 20) {
-            header.classList.add("shadow-md", "bg-white/95", "dark:bg-slate-950/80");
+            header.classList.add(
+              "shadow-md",
+              "bg-white/95",
+              "dark:bg-slate-950/80",
+            );
             header.classList.remove("bg-white/90", "dark:bg-transparent");
           } else {
-            header.classList.remove("shadow-md", "bg-white/95", "dark:bg-slate-950/80");
+            header.classList.remove(
+              "shadow-md",
+              "bg-white/95",
+              "dark:bg-slate-950/80",
+            );
             header.classList.add("bg-white/90", "dark:bg-transparent");
           }
         };
 
-        window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
+        window.addEventListener("scroll", updateHeaderOnScroll, {
+          passive: true,
+        });
         updateHeaderOnScroll();
       });
     </script>
